@@ -1,0 +1,44 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+# 目標尺寸
+target_inner_width = 1200
+target_inner_height = 800
+
+# 已知的邊框和工具列大小（根據你的結果）
+border_width = 16   # outerWidth - innerWidth
+border_height = 200 # outerHeight - innerHeight
+
+# 初始化 Chrome 瀏覽器
+chrome_options = Options()
+driver = webdriver.Chrome(options=chrome_options)
+
+# 設置精確的窗口大小（目標 + 邊框補償）
+driver.set_window_size(target_inner_width + border_width, target_inner_height + border_height)
+
+# 使用 JavaScript 微調（確保精確匹配）
+driver.execute_script(f"""
+    const targetWidth = {target_inner_width};
+    const targetHeight = {target_inner_height};
+    let attempts = 0;
+    const maxAttempts = 5;
+    while ((window.innerWidth !== targetWidth || window.innerHeight !== targetHeight) && attempts < maxAttempts) {{
+        const widthDiff = targetWidth - window.innerWidth;
+        const heightDiff = targetHeight - window.innerHeight;
+        window.resizeBy(widthDiff, heightDiff);
+        attempts++;
+    }}
+""")
+
+# 驗證結果
+inner_width = driver.execute_script("return window.innerWidth;")
+inner_height = driver.execute_script("return window.innerHeight;")
+print(f"最終調整後 innerWidth: {inner_width}, innerHeight: {inner_height}")
+
+# 檢查 outerWidth 和 outerHeight
+outer_width = driver.execute_script("return window.outerWidth;")
+outer_height = driver.execute_script("return window.outerHeight;")
+print(f"outerWidth: {outer_width}, outerHeight: {outer_height}")
+
+# 關閉瀏覽器
+driver.quit()
