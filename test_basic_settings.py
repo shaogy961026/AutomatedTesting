@@ -10,8 +10,7 @@ import warnings
 logging.basicConfig(level=logging.INFO)  # 加回這行
 logger = logging.getLogger(__name__)
 
-@pytest.mark.dependency()
-def test_page_display_normal(driver):
+def test_page_display_normal(driver,reset_state):
     try:
         logger.info("檢查頁面是否正常顯示")
         WebDriverWait(driver, 20).until(
@@ -24,8 +23,7 @@ def test_page_display_normal(driver):
         logger.error(f"頁面顯示測試失敗: {str(e)}")
         raise
 
-@pytest.mark.dependency()
-def test_page_title_display_correct(driver):
+def test_page_title_display_correct(driver,reset_state):
     try:
         logger.info("檢查頁面標題是否正確")
         title = driver.title
@@ -36,8 +34,7 @@ def test_page_title_display_correct(driver):
         logger.error(f"標題顯示測試失敗: {str(e)}")
         raise
 
-@pytest.mark.dependency()
-def test_page_reload_no_layout_error(driver):
+def test_page_reload_no_layout_error(driver,reset_state):
     try:
         logger.info("重新載入頁面")
         driver.refresh()
@@ -52,8 +49,7 @@ def test_page_reload_no_layout_error(driver):
         logger.error(f"頁面重新載入測試失敗: {str(e)}")
         raise
 
-@pytest.mark.dependency()
-def test_page_navigation_no_layout_error(driver):
+def test_page_navigation_no_layout_error(driver,reset_state):
     try:
         logger.info("模擬點擊上一頁")
         driver.execute_script("window.history.back();")
@@ -70,8 +66,7 @@ def test_page_navigation_no_layout_error(driver):
         logger.error(f"頁面切換測試失敗: {str(e)}")
         raise
 
-@pytest.mark.dependency()
-def test_browser_tab_switch_no_layout_error(driver):
+def test_browser_tab_switch_no_layout_error(driver,reset_state):
     try:
         logger.info("模擬開新分頁並切換")
         driver.execute_script("window.open('about:blank', '_blank');")
@@ -88,8 +83,7 @@ def test_browser_tab_switch_no_layout_error(driver):
         logger.error(f"分頁切換測試失敗: {str(e)}")
         raise
 
-@pytest.mark.dependency()
-def test_pc_loading_animation_on_first_visit(driver):
+def test_pc_loading_animation_on_first_visit(driver,reset_state):
     try:
         # 清空緩存和cookies以模擬首次進入
         logger.info("清空瀏覽器緩存和cookies")

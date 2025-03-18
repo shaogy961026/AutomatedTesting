@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO)  # 加回這行
 logger = logging.getLogger(__name__)
 
 @pytest.mark.dependency()
-def test_mobile_no_header(mobile_driver):
+def test_mobile_no_header(mobile_driver,reset_mobile_state):
     try:
         # 等待頁面載入
         WebDriverWait(mobile_driver, 20).until(

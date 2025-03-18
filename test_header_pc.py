@@ -11,8 +11,7 @@ import warnings
 logging.basicConfig(level=logging.INFO)  # 加回這行
 logger = logging.getLogger(__name__)
 
-@pytest.mark.dependency()
-def test_gamania_logo_redirect_to_official(driver):
+def test_gamania_logo_redirect_to_official(driver,reset_state):
     try:
         logger.info("查找遊戲橘子LOGO")
         logo = WebDriverWait(driver, 20).until(
@@ -22,15 +21,12 @@ def test_gamania_logo_redirect_to_official(driver):
         time.sleep(2)
         assert "https://tw.beanfun.com/" in driver.current_url, "未跳轉至遊戲橘子官網"
         logger.info("LOGO跳轉測試通過")
-        logger.info("回前一頁")
-        driver.execute_script("window.history.back();")
-        time.sleep(2)
     except Exception as e:
         logger.error(f"LOGO跳轉測試失敗: {str(e)}")
         raise
 
 @pytest.mark.dependency()
-def test_game_dropdown_expandable(driver):
+def test_game_dropdown_expandable(driver,reset_state):
     try:
         logger.info("查找遊戲下拉按鈕")
         game_btn = WebDriverWait(driver, 20).until(

@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO)  # 加回這行
 logger = logging.getLogger(__name__)
 
 @pytest.mark.dependency()
-def test_main_visual_display_normal(driver):
+def test_main_visual_display_normal(driver,reset_state):
     try:
         logger.info("檢查主視覺是否正常顯示")
         main_visual = WebDriverWait(driver, 20).until(
@@ -25,7 +25,7 @@ def test_main_visual_display_normal(driver):
         raise
 
 @pytest.mark.dependency(depends=["test_main_visual_display_normal"])
-def test_maple_story_logo_display_normal(driver):
+def test_maple_story_logo_display_normal(driver,reset_state):
     try:
         logger.info("檢查新楓之谷LOGO是否正常顯示")
         logo = WebDriverWait(driver, 20).until(
@@ -101,7 +101,7 @@ def test_maple_story_logo_display_normal(driver):
 '''
 
 @pytest.mark.dependency()
-def test_helper_watermark_display_correct(driver):
+def test_helper_watermark_display_correct(driver,reset_state):
     try:
         logger.info("檢查小幫手floating是否顯示正確")
         helper = WebDriverWait(driver, 20).until(
@@ -114,7 +114,7 @@ def test_helper_watermark_display_correct(driver):
         raise
 
 @pytest.mark.dependency(depends=["test_helper_watermark_display_correct"])
-def test_helper_watermark_click_redirect(driver):
+def test_helper_watermark_click_redirect(driver,reset_state):
     try:
         logger.info("檢查小幫手floating是否可以點擊")
         helper = WebDriverWait(driver, 20).until(
@@ -128,14 +128,14 @@ def test_helper_watermark_click_redirect(driver):
         )
         assert chat_box.is_displayed(), "小幫手floating未顯示"
         logger.info("小幫手floating對話框顯示測試通過")
-        helper.click()
-        logger.info("關閉小幫手floating對話框")
+        # helper.click()
+        # logger.info("關閉小幫手floating對話框")
     except Exception as e:
         logger.error(f"小幫手floating跳轉測試失敗: {str(e)}")
         raise
 
 @pytest.mark.dependency(depends=["test_helper_watermark_display_correct"])
-def test_helper_watermark_scroll_follow(driver):
+def test_helper_watermark_scroll_follow(driver,reset_state):
     try:
         logger.info("檢查小幫手floating是否隨頁面滑動跟隨")
         helper = WebDriverWait(driver, 20).until(
@@ -178,8 +178,7 @@ def test_helper_watermark_scroll_follow(driver):
 '''
 
 
-@pytest.mark.dependency()
-def test_beanfun_icon_redirect(driver):
+def test_beanfun_icon_redirect(driver,reset_state):
     try:
         logger.info("點擊Beanfun Icon並檢查跳轉")
         icon = WebDriverWait(driver, 20).until(
@@ -187,18 +186,17 @@ def test_beanfun_icon_redirect(driver):
         )
         icon.click()
         time.sleep(2)
-        driver.switch_to.window(driver.window_handles[1])
+        driver.switch_to.window(driver.window_handles[-1])
         assert "https://www.beanfun.com/" in driver.current_url, "Beanfun Icon未跳轉至正確頁面"
         logger.info("Beanfun Icon跳轉測試通過")
         # 關閉新標籤頁並切回原始頁面
-        driver.close()
-        driver.switch_to.window(driver.window_handles[0])
+        # driver.close()
+        # driver.switch_to.window(driver.window_handles[0])
     except Exception as e:
         logger.error(f"Beanfun Icon跳轉測試失敗: {str(e)}")
         raise
 
-@pytest.mark.dependency()
-def test_facebook_icon_redirect(driver):
+def test_facebook_icon_redirect(driver,reset_state):
     try:
         logger.info("點擊Facebook Icon並檢查跳轉")
         icon = WebDriverWait(driver, 20).until(
@@ -206,18 +204,16 @@ def test_facebook_icon_redirect(driver):
         )
         icon.click()
         time.sleep(2)
-        driver.switch_to.window(driver.window_handles[1])
+        driver.switch_to.window(driver.window_handles[-1])
         assert "https://www.facebook.com/www.maplestory.msfans.com.tw" in driver.current_url, "Facebook Icon未跳轉至官方臉書頁面"
         logger.info("Facebook Icon跳轉測試通過")
-        # 關閉新標籤頁並切回原始頁面
-        driver.close()
-        driver.switch_to.window(driver.window_handles[0])
+
     except Exception as e:
         logger.error(f"Facebook Icon跳轉測試失敗: {str(e)}")
         raise
 
 @pytest.mark.dependency()
-def test_instagram_icon_redirect(driver):
+def test_instagram_icon_redirect(driver,reset_state):
     try:
         logger.info("點擊Instagram Icon並檢查跳轉")
         icon = WebDriverWait(driver, 20).until(
@@ -225,18 +221,15 @@ def test_instagram_icon_redirect(driver):
         )
         icon.click()
         time.sleep(2)
-        driver.switch_to.window(driver.window_handles[1])
+        driver.switch_to.window(driver.window_handles[-1])
         assert "https://www.instagram.com/maplestory_tw" in driver.current_url, "Instagram Icon未跳轉至官方IG頁面"
         logger.info("Instagram Icon跳轉測試通過")
-        # 關閉新標籤頁並切回原始頁面
-        driver.close()
-        driver.switch_to.window(driver.window_handles[0])
     except Exception as e:
         logger.error(f"Instagram Icon跳轉測試失敗: {str(e)}")
         raise
 
 @pytest.mark.dependency()
-def test_sound_play_normal(driver):
+def test_sound_play_normal(driver,reset_state):
     try:
         logger.info("點擊音樂ON按鈕並檢查播放")
         on_button = WebDriverWait(driver, 20).until(
@@ -256,7 +249,7 @@ def test_sound_play_normal(driver):
         raise
 
 @pytest.mark.dependency(depends=["test_sound_play_normal"])
-def test_sound_close_normal(driver):
+def test_sound_close_normal(driver,reset_state):
     try:
         logger.info("測試音樂關閉功能")
         off_button = WebDriverWait(driver, 20).until(
@@ -273,7 +266,7 @@ def test_sound_close_normal(driver):
         raise
 
 @pytest.mark.dependency()
-def test_sound_switch_normal_with_default_play(driver):
+def test_sound_switch_normal_with_default_play(driver,reset_state):
     try:
         logger.info("測試點擊下一首按鈕是否切換歌曲")
         
@@ -315,7 +308,7 @@ def test_sound_switch_normal_with_default_play(driver):
         raise
 
 @pytest.mark.dependency()
-def test_sound_marquee_display_normal(driver):
+def test_sound_marquee_display_normal(driver,reset_state):
     try:
         logger.info("檢查歌名跑馬燈是否正常顯示")
         marquee = WebDriverWait(driver, 20).until(
@@ -328,7 +321,7 @@ def test_sound_marquee_display_normal(driver):
         raise
 
 @pytest.mark.dependency()
-def test_game_start_not_logged_in_redirect(driver):
+def test_game_start_not_logged_in_redirect(driver,reset_state):
     try:
         logger.info("未登入狀態下點擊GAME START")
         game_start = WebDriverWait(driver, 20).until(
@@ -339,9 +332,6 @@ def test_game_start_not_logged_in_redirect(driver):
         logger.info(f"目前網頁為{driver.current_url}")
         assert "https://tw.newlogin.beanfun.com/loginform" in driver.current_url, "未引導至共登頁面"
         logger.info("未登入GAME START跳轉測試通過")
-        driver.get('https://maplestory.beanfun.com/main')
-        time.sleep(2)
-        logger.info("從登入畫面回首頁")
     except Exception as e:
         logger.error(f"未登入GAME START跳轉測試失敗: {str(e)}")
         raise
@@ -365,7 +355,7 @@ def test_game_start_not_logged_in_redirect(driver):
 '''
 
 @pytest.mark.dependency()
-def test_game_start_hover_animation(driver):
+def test_game_start_hover_animation(driver,reset_state):
     try:
         
         logger.info("測試webstart按鈕hover背景變化")
@@ -409,7 +399,7 @@ def test_game_start_hover_animation(driver):
         raise
 
 @pytest.mark.dependency()
-def test_game_download_redirect(driver):
+def test_game_download_redirect(driver,reset_state):
     try:
         logger.info("點擊遊戲下載並檢查跳轉")
         download_btn = WebDriverWait(driver, 20).until(
@@ -419,15 +409,12 @@ def test_game_download_redirect(driver):
         time.sleep(2)
         assert "download" in driver.current_url, "未跳轉至下載專區"
         logger.info("遊戲下載跳轉測試通過")
-        driver.get('https://maplestory.beanfun.com/main')
-        logger.info("從下載頁回首頁")
-        time.sleep(2)
     except Exception as e:
         logger.error(f"遊戲下載跳轉測試失敗: {str(e)}")
         raise
 
 @pytest.mark.dependency()
-def test_register_account_redirect(driver):
+def test_register_account_redirect(driver,reset_state):
     try:
         logger.info("點擊申請帳號並檢查跳轉")
         register_btn = WebDriverWait(driver, 20).until(
@@ -437,15 +424,12 @@ def test_register_account_redirect(driver):
         time.sleep(2)
         assert "Register" in driver.current_url, "未跳轉至註冊頁面"
         logger.info("申請帳號跳轉測試通過")
-        driver.get('https://maplestory.beanfun.com/main')
-        logger.info("從申請帳號頁回首頁")
-        time.sleep(2)
     except Exception as e:
         logger.error(f"申請帳號跳轉測試失敗: {str(e)}")
         raise
 
 @pytest.mark.dependency()
-def test_navigation_bar_fixed_on_scroll(driver):
+def test_navigation_bar_fixed_on_scroll(driver,reset_state):
     try:
         logger.info("檢查導覽列是否在下滑時固定")
         driver.execute_script("window.scrollTo(0, 500);")
