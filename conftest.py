@@ -1,9 +1,10 @@
 import pytest
 import logging
+import warnings
 from browser_setup import setup_browser_with_size,mobile_setup_browser
 
 # 設置日誌
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO)  # 加回這行
 logger = logging.getLogger(__name__)
 
 @pytest.fixture(scope="module")
@@ -14,7 +15,6 @@ def driver():
     driver.implicitly_wait(10)  # 設置隱式等待
     logger.info("頁面加載完成")
     yield driver
-    logger.info("關閉瀏覽器")
     driver.quit()
     
 @pytest.fixture(scope="module")
@@ -26,6 +26,5 @@ def mobile_driver():
     driver.implicitly_wait(10)
     logger.info("mobile頁面加載完成")
     yield driver
-    logger.info("關閉mobile瀏覽器")
     driver.quit()
     

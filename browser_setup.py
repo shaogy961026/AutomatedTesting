@@ -5,7 +5,10 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 import time
 import logging
+import warnings
 
+# 設置日誌
+logging.basicConfig(level=logging.INFO)  # 加回這行
 logger = logging.getLogger(__name__)
 
 _final_width = None
@@ -27,7 +30,7 @@ def setup_browser_with_size(target_inner_width=1600, target_inner_height=731):
                 logger.info(f"從設定檔讀取尺寸: {_final_width}x{_final_height}")
                 service = Service(chromedriver_path)
                 options = Options()
-                options.add_argument("--headless")
+                # options.add_argument("--headless")
                 options.add_argument("--disable-gpu")
                 options.add_argument("--no-sandbox")
                 options.add_argument("--disable-dev-shm-usage")

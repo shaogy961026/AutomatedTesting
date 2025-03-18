@@ -5,7 +5,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 import logging
+import warnings
 
+# 設置日誌
+logging.basicConfig(level=logging.INFO)  # 加回這行
 logger = logging.getLogger(__name__)
 
 @pytest.mark.dependency()
@@ -59,6 +62,8 @@ def test_game_dropdown_online_redirect(driver):
         logger.error(f"線上遊戲跳轉測試失敗: {str(e)}")
         raise
 
+'''
+疑似棄用
 # @pytest.mark.dependency()
 # def test_game_dropdown_mobile_redirect(driver):
 #     try:
@@ -119,7 +124,9 @@ def test_game_dropdown_online_redirect(driver):
 #     except Exception as e:
 #         logger.error(f"Header圖文排列測試失敗: {str(e)}")
 #         raise
-        
+     
+'''
+    
 if __name__ == "__main__":
     result = pytest.main(["-v", "--html=report.html", __file__])
 
