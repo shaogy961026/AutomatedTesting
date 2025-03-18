@@ -5,7 +5,6 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 import time
 import logging
-import warnings
 
 # 設置日誌
 logging.basicConfig(level=logging.INFO)  # 加回這行

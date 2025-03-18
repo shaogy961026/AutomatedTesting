@@ -1,6 +1,5 @@
 import pytest
 import logging
-import warnings
 from browser_setup import setup_browser_with_size,mobile_setup_browser
 
 # 設置日誌

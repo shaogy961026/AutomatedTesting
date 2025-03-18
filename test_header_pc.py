@@ -5,7 +5,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 import logging
-import warnings
 
 # 設置日誌
 logging.basicConfig(level=logging.INFO)  # 加回這行
