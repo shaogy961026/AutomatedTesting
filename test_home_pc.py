@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.common.exceptions import TimeoutException
 import time
 import logging
 
@@ -11,31 +12,31 @@ import logging
 logging.basicConfig(level=logging.INFO)  # 加回這行
 logger = logging.getLogger(__name__)
 
-# @pytest.mark.dependency()
-# def test_main_visual_display_normal(driver,reset_state):
-#     try:
-#         logger.info("檢查主視覺是否正常顯示")
-#         main_visual = WebDriverWait(driver, 20).until(
-#             EC.presence_of_element_located((By.ID, "mKv"))
-#         )
-#         assert main_visual.is_displayed(), "主視覺未正常顯示"
-#         logger.info("主視覺顯示測試通過")
-#     except Exception as e:
-#         logger.error(f"主視覺顯示測試失敗: {str(e)}")
-#         raise
+@pytest.mark.dependency()
+def test_main_visual_display_normal(driver,reset_state):
+    try:
+        logger.info("檢查主視覺是否正常顯示")
+        main_visual = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.ID, "mKv"))
+        )
+        assert main_visual.is_displayed(), "主視覺未正常顯示"
+        logger.info("主視覺顯示測試通過")
+    except Exception as e:
+        logger.error(f"主視覺顯示測試失敗: {str(e)}")
+        raise
 
-# @pytest.mark.dependency(depends=["test_main_visual_display_normal"])
-# def test_maple_story_logo_display_normal(driver,reset_state):
-#     try:
-#         logger.info("檢查新楓之谷LOGO是否正常顯示")
-#         logo = WebDriverWait(driver, 20).until(
-#             EC.presence_of_element_located((By.CLASS_NAME, "mKv-logo"))
-#         )
-#         assert logo.is_displayed(), "新楓之谷LOGO未正常顯示"
-#         logger.info("新楓之谷LOGO顯示測試通過")
-#     except Exception as e:
-#         logger.error(f"LOGO顯示測試失敗: {str(e)}")
-#         raise
+@pytest.mark.dependency(depends=["test_main_visual_display_normal"])
+def test_maple_story_logo_display_normal(driver,reset_state):
+    try:
+        logger.info("檢查新楓之谷LOGO是否正常顯示")
+        logo = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "mKv-logo"))
+        )
+        assert logo.is_displayed(), "新楓之谷LOGO未正常顯示"
+        logger.info("新楓之谷LOGO顯示測試通過")
+    except Exception as e:
+        logger.error(f"LOGO顯示測試失敗: {str(e)}")
+        raise
 
 '''
 疑似棄用
@@ -100,62 +101,62 @@ logger = logging.getLogger(__name__)
 
 '''
 
-# @pytest.mark.dependency()
-# def test_helper_watermark_display_correct(driver,reset_state):
-#     try:
-#         logger.info("檢查小幫手floating是否顯示正確")
-#         helper = WebDriverWait(driver, 20).until(
-#             EC.presence_of_element_located((By.ID, "gim-bot-tool-button"))
-#         )
-#         assert helper.is_displayed(), "小幫手floating未顯示"
-#         logger.info("小幫手floating顯示測試通過")
-#     except Exception as e:
-#         logger.error(f"小幫手floating顯示測試失敗: {str(e)}")
-#         raise
+@pytest.mark.dependency()
+def test_helper_watermark_display_correct(driver,reset_state):
+    try:
+        logger.info("檢查小幫手floating是否顯示正確")
+        helper = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.ID, "gim-bot-tool-button"))
+        )
+        assert helper.is_displayed(), "小幫手floating未顯示"
+        logger.info("小幫手floating顯示測試通過")
+    except Exception as e:
+        logger.error(f"小幫手floating顯示測試失敗: {str(e)}")
+        raise
 
-# @pytest.mark.dependency(depends=["test_helper_watermark_display_correct"])
-# def test_helper_watermark_click_redirect(driver,reset_state):
-#     try:
-#         logger.info("檢查小幫手floating是否可以點擊")
-#         helper = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.ID, "gim-bot-tool-button"))
-#         )
-#         helper.click()
+@pytest.mark.dependency(depends=["test_helper_watermark_display_correct"])
+def test_helper_watermark_click_redirect(driver,reset_state):
+    try:
+        logger.info("檢查小幫手floating是否可以點擊")
+        helper = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.ID, "gim-bot-tool-button"))
+        )
+        helper.click()
 
-#         logger.info("檢查點擊小幫手是否跳出對話框")
-#         chat_box = WebDriverWait(driver, 20).until(
-#             EC.presence_of_element_located((By.ID, "gim-bot-tool"))
-#         )
-#         assert chat_box.is_displayed(), "小幫手floating未顯示"
-#         logger.info("小幫手floating對話框顯示測試通過")
-#         # helper.click()
-#         # logger.info("關閉小幫手floating對話框")
-#     except Exception as e:
-#         logger.error(f"小幫手floating跳轉測試失敗: {str(e)}")
-#         raise
+        logger.info("檢查點擊小幫手是否跳出對話框")
+        chat_box = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.ID, "gim-bot-tool"))
+        )
+        assert chat_box.is_displayed(), "小幫手floating未顯示"
+        logger.info("小幫手floating對話框顯示測試通過")
+        # helper.click()
+        # logger.info("關閉小幫手floating對話框")
+    except Exception as e:
+        logger.error(f"小幫手floating跳轉測試失敗: {str(e)}")
+        raise
 
-# @pytest.mark.dependency(depends=["test_helper_watermark_display_correct"])
-# def test_helper_watermark_scroll_follow(driver,reset_state):
-#     try:
-#         logger.info("檢查小幫手floating是否隨頁面滑動跟隨")
-#         helper = WebDriverWait(driver, 20).until(
-#             EC.presence_of_element_located((By.ID, "gim-bot-tool-button"))
-#         )
-#         initial_position = helper.location['y']
-#         logger.info(f"初始位置{initial_position}")
-#         driver.execute_script("window.scrollTo(0, 500);")
-#         logger.info("滑動至0,500")
-#         time.sleep(2)
-#         new_position = helper.location['y']
-#         logger.info(f"新位置{new_position}")
-#         assert new_position != initial_position, "小幫手floating未隨滾動跟隨"
-#         logger.info("小幫手flaoting跟隨測試通過")
-#         driver.execute_script("window.scrollTo(0, 0);")
-#         logger.info("滑動至0,0")        
+@pytest.mark.dependency(depends=["test_helper_watermark_display_correct"])
+def test_helper_watermark_scroll_follow(driver,reset_state):
+    try:
+        logger.info("檢查小幫手floating是否隨頁面滑動跟隨")
+        helper = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.ID, "gim-bot-tool-button"))
+        )
+        initial_position = helper.location['y']
+        logger.info(f"初始位置{initial_position}")
+        driver.execute_script("window.scrollTo(0, 500);")
+        logger.info("滑動至0,500")
+        time.sleep(2)
+        new_position = helper.location['y']
+        logger.info(f"新位置{new_position}")
+        assert new_position != initial_position, "小幫手floating未隨滾動跟隨"
+        logger.info("小幫手flaoting跟隨測試通過")
+        driver.execute_script("window.scrollTo(0, 0);")
+        logger.info("滑動至0,0")        
         
-#     except Exception as e:
-#         logger.error(f"小幫手floating跟隨測試失敗: {str(e)}")
-#         raise
+    except Exception as e:
+        logger.error(f"小幫手floating跟隨測試失敗: {str(e)}")
+        raise
 
 '''
 疑似棄用
@@ -178,163 +179,163 @@ logger = logging.getLogger(__name__)
 '''
 
 
-# def test_beanfun_icon_redirect(driver,reset_state):
-#     try:
-#         logger.info("點擊Beanfun Icon並檢查跳轉")
-#         icon = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CLASS_NAME, "mKv-social-bf"))
-#         )
-#         icon.click()
-#         time.sleep(2)
-#         driver.switch_to.window(driver.window_handles[-1])
-#         assert "https://www.beanfun.com/" in driver.current_url, "Beanfun Icon未跳轉至正確頁面"
-#         logger.info("Beanfun Icon跳轉測試通過")
-#         # 關閉新標籤頁並切回原始頁面
-#         # driver.close()
-#         # driver.switch_to.window(driver.window_handles[0])
-#     except Exception as e:
-#         logger.error(f"Beanfun Icon跳轉測試失敗: {str(e)}")
-#         raise
+def test_beanfun_icon_redirect(driver,reset_state):
+    try:
+        logger.info("點擊Beanfun Icon並檢查跳轉")
+        icon = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "mKv-social-bf"))
+        )
+        icon.click()
+        time.sleep(2)
+        driver.switch_to.window(driver.window_handles[-1])
+        assert "https://www.beanfun.com/" in driver.current_url, "Beanfun Icon未跳轉至正確頁面"
+        logger.info("Beanfun Icon跳轉測試通過")
+        # 關閉新標籤頁並切回原始頁面
+        # driver.close()
+        # driver.switch_to.window(driver.window_handles[0])
+    except Exception as e:
+        logger.error(f"Beanfun Icon跳轉測試失敗: {str(e)}")
+        raise
 
-# def test_facebook_icon_redirect(driver,reset_state):
-#     try:
-#         logger.info("點擊Facebook Icon並檢查跳轉")
-#         icon = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CLASS_NAME, "mKv-social-fb"))
-#         )
-#         icon.click()
-#         time.sleep(2)
-#         driver.switch_to.window(driver.window_handles[-1])
-#         assert "https://www.facebook.com/www.maplestory.msfans.com.tw" in driver.current_url, "Facebook Icon未跳轉至官方臉書頁面"
-#         logger.info("Facebook Icon跳轉測試通過")
+def test_facebook_icon_redirect(driver,reset_state):
+    try:
+        logger.info("點擊Facebook Icon並檢查跳轉")
+        icon = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "mKv-social-fb"))
+        )
+        icon.click()
+        time.sleep(2)
+        driver.switch_to.window(driver.window_handles[-1])
+        assert "https://www.facebook.com/www.maplestory.msfans.com.tw" in driver.current_url, "Facebook Icon未跳轉至官方臉書頁面"
+        logger.info("Facebook Icon跳轉測試通過")
 
-#     except Exception as e:
-#         logger.error(f"Facebook Icon跳轉測試失敗: {str(e)}")
-#         raise
+    except Exception as e:
+        logger.error(f"Facebook Icon跳轉測試失敗: {str(e)}")
+        raise
 
-# @pytest.mark.dependency()
-# def test_instagram_icon_redirect(driver,reset_state):
-#     try:
-#         logger.info("點擊Instagram Icon並檢查跳轉")
-#         icon = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CLASS_NAME, "mKv-social-ig"))
-#         )
-#         icon.click()
-#         time.sleep(2)
-#         driver.switch_to.window(driver.window_handles[-1])
-#         assert "https://www.instagram.com/maplestory_tw" in driver.current_url, "Instagram Icon未跳轉至官方IG頁面"
-#         logger.info("Instagram Icon跳轉測試通過")
-#     except Exception as e:
-#         logger.error(f"Instagram Icon跳轉測試失敗: {str(e)}")
-#         raise
+@pytest.mark.dependency()
+def test_instagram_icon_redirect(driver,reset_state):
+    try:
+        logger.info("點擊Instagram Icon並檢查跳轉")
+        icon = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "mKv-social-ig"))
+        )
+        icon.click()
+        time.sleep(2)
+        driver.switch_to.window(driver.window_handles[-1])
+        assert "https://www.instagram.com/maplestory_tw" in driver.current_url, "Instagram Icon未跳轉至官方IG頁面"
+        logger.info("Instagram Icon跳轉測試通過")
+    except Exception as e:
+        logger.error(f"Instagram Icon跳轉測試失敗: {str(e)}")
+        raise
 
-# @pytest.mark.dependency()
-# def test_sound_play_normal(driver,reset_state):
-#     try:
-#         logger.info("點擊音樂ON按鈕並檢查播放")
-#         on_button = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CLASS_NAME, "mKv-musicPlayer-on"))
-#         )
-#         # 用 ActionChains 模擬使用者點擊
-#         actions = ActionChains(driver)
-#         actions.move_to_element(on_button).click().perform()
-#         time.sleep(2)  # 等待音樂開始播放
+@pytest.mark.dependency()
+def test_sound_play_normal(driver,reset_state):
+    try:
+        logger.info("點擊音樂ON按鈕並檢查播放")
+        on_button = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "mKv-musicPlayer-on"))
+        )
+        # 用 ActionChains 模擬使用者點擊
+        actions = ActionChains(driver)
+        actions.move_to_element(on_button).click().perform()
+        time.sleep(2)  # 等待音樂開始播放
         
-#         # 檢查音樂是否播放
-#         is_playing = driver.execute_script("return !document.getElementById('mKvAudio').paused;")
-#         assert is_playing, "點擊ON按鈕後音樂未播放"
-#         logger.info("音樂播放測試通過")
-#     except Exception as e:
-#         logger.error(f"音樂播放測試失敗: {str(e)}")
-#         raise
+        # 檢查音樂是否播放
+        is_playing = driver.execute_script("return !document.getElementById('mKvAudio').paused;")
+        assert is_playing, "點擊ON按鈕後音樂未播放"
+        logger.info("音樂播放測試通過")
+    except Exception as e:
+        logger.error(f"音樂播放測試失敗: {str(e)}")
+        raise
 
-# @pytest.mark.dependency(depends=["test_sound_play_normal"])
-# def test_sound_close_normal(driver,reset_state):
-#     try:
-#         logger.info("測試音樂關閉功能")
-#         off_button = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CLASS_NAME, "mKv-musicPlayer-off"))
-#         )
-#         actions = ActionChains(driver)
-#         actions.move_to_element(off_button).click().perform()
-#         time.sleep(2)
-#         is_paused = driver.execute_script("return document.getElementById('mKvAudio').paused;")
-#         assert is_paused, "點擊OFF按鈕後音樂未停止"
-#         logger.info("音樂停止測試通過")
-#     except Exception as e:
-#         logger.error(f"音樂關閉測試失敗: {str(e)}")
-#         raise
+@pytest.mark.dependency(depends=["test_sound_play_normal"])
+def test_sound_close_normal(driver,reset_state):
+    try:
+        logger.info("測試音樂關閉功能")
+        off_button = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "mKv-musicPlayer-off"))
+        )
+        actions = ActionChains(driver)
+        actions.move_to_element(off_button).click().perform()
+        time.sleep(2)
+        is_paused = driver.execute_script("return document.getElementById('mKvAudio').paused;")
+        assert is_paused, "點擊OFF按鈕後音樂未停止"
+        logger.info("音樂停止測試通過")
+    except Exception as e:
+        logger.error(f"音樂關閉測試失敗: {str(e)}")
+        raise
 
-# @pytest.mark.dependency()
-# def test_sound_switch_normal_with_default_play(driver,reset_state):
-#     try:
-#         logger.info("測試點擊下一首按鈕是否切換歌曲")
+@pytest.mark.dependency()
+def test_sound_switch_normal_with_default_play(driver,reset_state):
+    try:
+        logger.info("測試點擊下一首按鈕是否切換歌曲")
         
-#         # 獲取當前歌曲標題
-#         initial_title_elem = WebDriverWait(driver, 20).until(
-#             EC.presence_of_element_located((By.CLASS_NAME, "marquee-wrap"))
-#         )
-#         initial_title = initial_title_elem.text.strip()
-#         logger.info(f"初始歌曲標題: {initial_title}")
+        # 獲取當前歌曲標題
+        initial_title_elem = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "marquee-wrap"))
+        )
+        initial_title = initial_title_elem.text.strip()
+        logger.info(f"初始歌曲標題: {initial_title}")
         
-#         # 獲取當前音頻 src
-#         initial_src = driver.execute_script("return document.getElementById('mKvAudio').querySelector('source').src;")
-#         logger.info(f"初始音頻 src: {initial_src}")
+        # 獲取當前音頻 src
+        initial_src = driver.execute_script("return document.getElementById('mKvAudio').querySelector('source').src;")
+        logger.info(f"初始音頻 src: {initial_src}")
         
-#         # 點擊下一首按鈕
-#         next_button = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CLASS_NAME, "mKv-musicPlayer-next"))
-#         )
-#         actions = ActionChains(driver)
-#         actions.move_to_element(next_button).click().perform()  # 模擬使用者點擊
-#         time.sleep(3)  # 等待歌曲切換
+        # 點擊下一首按鈕
+        next_button = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "mKv-musicPlayer-next"))
+        )
+        actions = ActionChains(driver)
+        actions.move_to_element(next_button).click().perform()  # 模擬使用者點擊
+        time.sleep(3)  # 等待歌曲切換
         
-#         # 檢查新歌曲標題
-#         new_title_elem = WebDriverWait(driver, 20).until(
-#             EC.presence_of_element_located((By.CLASS_NAME, "marquee-wrap"))
-#         )
-#         new_title = new_title_elem.text.strip()
-#         logger.info(f"新歌曲標題: {new_title}")
+        # 檢查新歌曲標題
+        new_title_elem = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "marquee-wrap"))
+        )
+        new_title = new_title_elem.text.strip()
+        logger.info(f"新歌曲標題: {new_title}")
         
-#         # 檢查新音頻 src
-#         new_src = driver.execute_script("return document.getElementById('mKvAudio').querySelector('source').src;")
-#         logger.info(f"新音頻 src: {new_src}")
+        # 檢查新音頻 src
+        new_src = driver.execute_script("return document.getElementById('mKvAudio').querySelector('source').src;")
+        logger.info(f"新音頻 src: {new_src}")
         
-#         # 驗證歌曲是否切換
-#         assert initial_title != new_title or initial_src != new_src, "點擊下一首按鈕後歌曲未切換"
-#         logger.info("歌曲切換測試通過")
-#     except Exception as e:
-#         logger.error(f"音樂切換測試失敗: {str(e)}")
-#         raise
+        # 驗證歌曲是否切換
+        assert initial_title != new_title or initial_src != new_src, "點擊下一首按鈕後歌曲未切換"
+        logger.info("歌曲切換測試通過")
+    except Exception as e:
+        logger.error(f"音樂切換測試失敗: {str(e)}")
+        raise
 
-# @pytest.mark.dependency()
-# def test_sound_marquee_display_normal(driver,reset_state):
-#     try:
-#         logger.info("檢查歌名跑馬燈是否正常顯示")
-#         marquee = WebDriverWait(driver, 20).until(
-#             EC.presence_of_element_located((By.CLASS_NAME, "marquee-wrap"))
-#         )
-#         assert marquee.is_displayed(), "歌名跑馬燈未顯示"
-#         logger.info("歌名跑馬燈顯示測試通過")
-#     except Exception as e:
-#         logger.error(f"歌名跑馬燈顯示測試失敗: {str(e)}")
-#         raise
+@pytest.mark.dependency()
+def test_sound_marquee_display_normal(driver,reset_state):
+    try:
+        logger.info("檢查歌名跑馬燈是否正常顯示")
+        marquee = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "marquee-wrap"))
+        )
+        assert marquee.is_displayed(), "歌名跑馬燈未顯示"
+        logger.info("歌名跑馬燈顯示測試通過")
+    except Exception as e:
+        logger.error(f"歌名跑馬燈顯示測試失敗: {str(e)}")
+        raise
 
-# @pytest.mark.dependency()
-# def test_game_start_not_logged_in_redirect(driver,reset_state):
-#     try:
-#         logger.info("未登入狀態下點擊GAME START")
-#         game_start = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CLASS_NAME, "mKv-shortcuts-webstart"))
-#         )
-#         game_start.click()
-#         time.sleep(5)
-#         logger.info(f"目前網頁為{driver.current_url}")
-#         assert "https://tw.newlogin.beanfun.com/loginform" in driver.current_url, "未引導至共登頁面"
-#         logger.info("未登入GAME START跳轉測試通過")
-#     except Exception as e:
-#         logger.error(f"未登入GAME START跳轉測試失敗: {str(e)}")
-#         raise
+@pytest.mark.dependency()
+def test_game_start_not_logged_in_redirect(driver,reset_state):
+    try:
+        logger.info("未登入狀態下點擊GAME START")
+        game_start = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "mKv-shortcuts-webstart"))
+        )
+        game_start.click()
+        time.sleep(5)
+        logger.info(f"目前網頁為{driver.current_url}")
+        assert "https://tw.newlogin.beanfun.com/loginform" in driver.current_url, "未引導至共登頁面"
+        logger.info("未登入GAME START跳轉測試通過")
+    except Exception as e:
+        logger.error(f"未登入GAME START跳轉測試失敗: {str(e)}")
+        raise
 
 '''
 需PROD測試帳號
@@ -354,212 +355,212 @@ logger = logging.getLogger(__name__)
 #         raise
 '''
 
-# @pytest.mark.dependency()
-# def test_game_start_hover_animation(driver,reset_state):
-#     try:
+@pytest.mark.dependency()
+def test_game_start_hover_animation(driver,reset_state):
+    try:
         
-#         logger.info("測試webstart按鈕hover背景變化")
+        logger.info("測試webstart按鈕hover背景變化")
         
-#         button = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CLASS_NAME, "mKv-shortcuts-webstart"))
-#         )
-#         logger.info(f"按鈕是否可見: {button.is_displayed()}")
-#         logger.info(f"按鈕位置: {button.location}, 大小: {button.size}")
+        button = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "mKv-shortcuts-webstart"))
+        )
+        logger.info(f"按鈕是否可見: {button.is_displayed()}")
+        logger.info(f"按鈕位置: {button.location}, 大小: {button.size}")
         
-#         # 確保滑鼠不在按鈕上，移到左上角
-#         actions = ActionChains(driver)
-#         actions.move_by_offset(10, 10).perform()
-#         time.sleep(1)
+        # 確保滑鼠不在按鈕上，移到左上角
+        actions = ActionChains(driver)
+        actions.move_by_offset(10, 10).perform()
+        time.sleep(1)
         
-#         # 初始狀態
-#         initial_background = driver.execute_script(
-#             "return window.getComputedStyle(document.querySelector('.mKv-shortcuts-webstart'), ':after').background;"
-#         )
-#         logger.info(f"初始狀態（滑鼠不在按鈕上） - :after background: {initial_background}")
+        # 初始狀態
+        initial_background = driver.execute_script(
+            "return window.getComputedStyle(document.querySelector('.mKv-shortcuts-webstart'), ':after').background;"
+        )
+        logger.info(f"初始狀態（滑鼠不在按鈕上） - :after background: {initial_background}")
         
-#         # 滑鼠移到按鈕上
-#         actions = ActionChains(driver)
-#         actions.move_to_element(button).perform()
-#         time.sleep(2)
+        # 滑鼠移到按鈕上
+        actions = ActionChains(driver)
+        actions.move_to_element(button).perform()
+        time.sleep(2)
         
-#         # hover後狀態
-#         hover_background = driver.execute_script(
-#             "return window.getComputedStyle(document.querySelector('.mKv-shortcuts-webstart'), ':after').background;"
-#         )
-#         logger.info(f"滑鼠移到按鈕上狀態 - :after background: {hover_background}")
+        # hover後狀態
+        hover_background = driver.execute_script(
+            "return window.getComputedStyle(document.querySelector('.mKv-shortcuts-webstart'), ':after').background;"
+        )
+        logger.info(f"滑鼠移到按鈕上狀態 - :after background: {hover_background}")
         
-#         # 比較
-#         logger.info(f"差異比較：初始 {'!=' if initial_background != hover_background else '=='} hover")
+        # 比較
+        logger.info(f"差異比較：初始 {'!=' if initial_background != hover_background else '=='} hover")
         
-#         assert initial_background != hover_background, "滑鼠移入前後背景應不同"
-#         logger.info("webstart按鈕hover背景測試通過")
+        assert initial_background != hover_background, "滑鼠移入前後背景應不同"
+        logger.info("webstart按鈕hover背景測試通過")
         
-#     except Exception as e:
-#         logger.error(f"webstart按鈕背景測試失敗: {str(e)}")
-#         raise
+    except Exception as e:
+        logger.error(f"webstart按鈕背景測試失敗: {str(e)}")
+        raise
 
-# @pytest.mark.dependency()
-# def test_game_download_redirect(driver,reset_state):
-#     try:
-#         logger.info("點擊遊戲下載並檢查跳轉")
-#         download_btn = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CLASS_NAME, "mKv-shortcuts-download"))
-#         )
-#         download_btn.click()
-#         time.sleep(2)
-#         assert "download" in driver.current_url, "未跳轉至下載專區"
-#         logger.info("遊戲下載跳轉測試通過")
-#     except Exception as e:
-#         logger.error(f"遊戲下載跳轉測試失敗: {str(e)}")
-#         raise
+@pytest.mark.dependency()
+def test_game_download_redirect(driver,reset_state):
+    try:
+        logger.info("點擊遊戲下載並檢查跳轉")
+        download_btn = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "mKv-shortcuts-download"))
+        )
+        download_btn.click()
+        time.sleep(2)
+        assert "download" in driver.current_url, "未跳轉至下載專區"
+        logger.info("遊戲下載跳轉測試通過")
+    except Exception as e:
+        logger.error(f"遊戲下載跳轉測試失敗: {str(e)}")
+        raise
 
-# @pytest.mark.dependency()
-# def test_register_account_redirect(driver,reset_state):
-#     try:
-#         logger.info("點擊申請帳號並檢查跳轉")
-#         register_btn = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CLASS_NAME, "mKv-shortcuts-apply"))
-#         )
-#         register_btn.click()
-#         time.sleep(2)
-#         assert "Register" in driver.current_url, "未跳轉至註冊頁面"
-#         logger.info("申請帳號跳轉測試通過")
-#     except Exception as e:
-#         logger.error(f"申請帳號跳轉測試失敗: {str(e)}")
-#         raise
+@pytest.mark.dependency()
+def test_register_account_redirect(driver,reset_state):
+    try:
+        logger.info("點擊申請帳號並檢查跳轉")
+        register_btn = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "mKv-shortcuts-apply"))
+        )
+        register_btn.click()
+        time.sleep(2)
+        assert "Register" in driver.current_url, "未跳轉至註冊頁面"
+        logger.info("申請帳號跳轉測試通過")
+    except Exception as e:
+        logger.error(f"申請帳號跳轉測試失敗: {str(e)}")
+        raise
 
-# def test_navigation_bar_fixed_on_scroll(driver,reset_state):
-#     try:
-#         logger.info("檢查導覽列是否在下滑時固定")
-#         driver.execute_script("window.scrollTo(0, 500);")
-#         logger.info("下滑至出現導航列")
-#         nav_bar = WebDriverWait(driver, 20).until(
-#             EC.presence_of_element_located((By.CLASS_NAME,"mainmenu-wrap"))
-#         )
-#         driver.execute_script("window.scrollTo(0, 1000);")
-#         logger.info("再次下滑測試導航列是否固定")
-#         time.sleep(2)
-#         assert nav_bar.is_displayed(), "導覽列未固定顯示"
-#         logger.info("導覽列固定測試通過")
-#     except Exception as e:
-#         logger.error(f"導覽列固定測試失敗: {str(e)}")
-#         raise
+def test_navigation_bar_fixed_on_scroll(driver,reset_state):
+    try:
+        logger.info("檢查導覽列是否在下滑時固定")
+        driver.execute_script("window.scrollTo(0, 500);")
+        logger.info("下滑至出現導航列")
+        nav_bar = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.CLASS_NAME,"mainmenu-wrap"))
+        )
+        driver.execute_script("window.scrollTo(0, 1000);")
+        logger.info("再次下滑測試導航列是否固定")
+        time.sleep(2)
+        assert nav_bar.is_displayed(), "導覽列未固定顯示"
+        logger.info("導覽列固定測試通過")
+    except Exception as e:
+        logger.error(f"導覽列固定測試失敗: {str(e)}")
+        raise
 
-# def test_navigation_bar_titles_display(driver,reset_state):
-#     try:
-#         # 預期的標題清單
-#         expected_titles = [
-#             "最新消息",
-#             "楓葉圖書",
-#             "下載專區",
-#             "楓葉會員",
-#             "香港專區"
-#         ]
+def test_navigation_bar_titles_display(driver,reset_state):
+    try:
+        # 預期的標題清單
+        expected_titles = [
+            "最新消息",
+            "楓葉圖書",
+            "下載專區",
+            "楓葉會員",
+            "香港專區"
+        ]
         
-#         logger.info("開始檢查主選單大標題")
+        logger.info("開始檢查主選單大標題")
         
-#         # 等待主選單元素出現
-#         menu_wrapper = WebDriverWait(driver, 20).until(
-#             EC.presence_of_element_located((By.CLASS_NAME, "mMainmenu-wrap"))
-#         )
+        # 等待主選單元素出現
+        menu_wrapper = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "mMainmenu-wrap"))
+        )
         
-#         # 獲取所有主分類標題元素
-#         menu_titles = menu_wrapper.find_elements(By.CLASS_NAME, "mMenumenu-cate-link")
+        # 獲取所有主分類標題元素
+        menu_titles = menu_wrapper.find_elements(By.CLASS_NAME, "mMenumenu-cate-link")
         
         
-#         # 檢查標題數量是否匹配
-#         assert len(menu_titles) == len(expected_titles), \
-#             f"預期有 {len(expected_titles)} 個標題，但找到 {len(menu_titles)} 個"
+        # 檢查標題數量是否匹配
+        assert len(menu_titles) == len(expected_titles), \
+            f"預期有 {len(expected_titles)} 個標題，但找到 {len(menu_titles)} 個"
         
-#         # 逐一檢查每個標題
-#         actual_titles = [title.text.strip() for title in menu_titles]
-#         for expected, actual in zip(expected_titles, actual_titles):
-#             logger.info(f"預期: {expected} 實際: {actual}")
-#             assert expected == actual, \
-#                 f"標題不匹配 - 預期: {expected}, 實際: {actual}"
+        # 逐一檢查每個標題
+        actual_titles = [title.text.strip() for title in menu_titles]
+        for expected, actual in zip(expected_titles, actual_titles):
+            logger.info(f"預期: {expected} 實際: {actual}")
+            assert expected == actual, \
+                f"標題不匹配 - 預期: {expected}, 實際: {actual}"
         
-#         logger.info("所有主選單大標題檢查通過")
+        logger.info("所有主選單大標題檢查通過")
         
-#     except Exception as e:
-#         logger.error(f"主選單大標題檢查失敗: {str(e)}")
-#         raise
+    except Exception as e:
+        logger.error(f"主選單大標題檢查失敗: {str(e)}")
+        raise
 
-# def test_nav_news_anchor_redirect(driver,reset_state):
-#     try:
-#         logger.info("點擊最新消息並檢查錨點跳轉")
+def test_nav_news_anchor_redirect(driver,reset_state):
+    try:
+        logger.info("點擊最新消息並檢查錨點跳轉")
         
-#         # 先找到主選單容器並滾動
-#         menu_wrapper = WebDriverWait(driver, 20).until(
-#             EC.presence_of_element_located((By.CLASS_NAME, "mMainmenu-wrap"))
-#         )
-#         driver.execute_script("arguments[0].scrollIntoView({block: 'start', behavior: 'smooth'});", menu_wrapper)
-#         time.sleep(2)
-        
-
-#         news_link = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CLASS_NAME, "mmBulletin"))
-#         )
-        
-#         # 確保可見並點擊
-#         driver.execute_script("arguments[0].scrollIntoView({block: 'center', behavior: 'smooth'});", news_link)
-#         time.sleep(1)
-        
-#         news_link.click()
-#         time.sleep(2)
-        
-#         news_section = driver.find_element(By.CLASS_NAME, "mBulletin-tabs")
-#         assert news_section.is_displayed(), "未跳轉至最新消息區塊"
-        
-#         logger.info("最新消息錨點跳轉測試通過")
-        
-#     except Exception as e:
-#         logger.error(f"最新消息錨點跳轉測試失敗: {str(e)}")
-#         raise
+        # 先找到主選單容器並滾動
+        menu_wrapper = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "mMainmenu-wrap"))
+        )
+        driver.execute_script("arguments[0].scrollIntoView({block: 'start', behavior: 'smooth'});", menu_wrapper)
+        time.sleep(2)
         
 
-# def test_nav_books_anchor_redirect(driver,reset_state):
-#     try:
-#         logger.info("點擊楓葉圖書並檢查錨點跳轉")
-#         # 先找到主選單容器並滾動
-#         menu_wrapper = WebDriverWait(driver, 20).until(
-#             EC.presence_of_element_located((By.CLASS_NAME, "mMainmenu-wrap"))
-#         )
-#         driver.execute_script("arguments[0].scrollIntoView({block: 'start', behavior: 'smooth'});", menu_wrapper)
-#         time.sleep(2)
+        news_link = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "mmBulletin"))
+        )
         
-#         books_link = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CLASS_NAME, "mmMedia"))
-#         )
-#         books_link.click()
-#         time.sleep(2)
-#         books_section = driver.find_element(By.CLASS_NAME, "mPageTitle")
-#         assert books_section.is_displayed(), "未跳轉至職業介紹區塊"
-#         logger.info("楓葉圖書錨點跳轉測試通過")
-#     except Exception as e:
-#         logger.error(f"楓葉圖書錨點跳轉測試失敗: {str(e)}")
-#         raise
+        # 確保可見並點擊
+        driver.execute_script("arguments[0].scrollIntoView({block: 'center', behavior: 'smooth'});", news_link)
+        time.sleep(1)
+        
+        news_link.click()
+        time.sleep(2)
+        
+        news_section = driver.find_element(By.CLASS_NAME, "mBulletin-tabs")
+        assert news_section.is_displayed(), "未跳轉至最新消息區塊"
+        
+        logger.info("最新消息錨點跳轉測試通過")
+        
+    except Exception as e:
+        logger.error(f"最新消息錨點跳轉測試失敗: {str(e)}")
+        raise
+        
 
-# def test_nav_download_redirect(driver,reset_state):
-#     try:
-#         logger.info("點擊下載專區並檢查跳轉")
-#         # 先找到主選單容器並滾動
-#         menu_wrapper = WebDriverWait(driver, 20).until(
-#             EC.presence_of_element_located((By.CLASS_NAME, "mMainmenu-wrap"))
-#         )
-#         driver.execute_script("arguments[0].scrollIntoView({block: 'start', behavior: 'smooth'});", menu_wrapper)
-#         time.sleep(2)
+def test_nav_books_anchor_redirect(driver,reset_state):
+    try:
+        logger.info("點擊楓葉圖書並檢查錨點跳轉")
+        # 先找到主選單容器並滾動
+        menu_wrapper = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "mMainmenu-wrap"))
+        )
+        driver.execute_script("arguments[0].scrollIntoView({block: 'start', behavior: 'smooth'});", menu_wrapper)
+        time.sleep(2)
         
-#         download_link = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CLASS_NAME, "mmDownload"))
-#         )
-#         download_link.click()
+        books_link = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "mmMedia"))
+        )
+        books_link.click()
+        time.sleep(2)
+        books_section = driver.find_element(By.CLASS_NAME, "mPageTitle")
+        assert books_section.is_displayed(), "未跳轉至職業介紹區塊"
+        logger.info("楓葉圖書錨點跳轉測試通過")
+    except Exception as e:
+        logger.error(f"楓葉圖書錨點跳轉測試失敗: {str(e)}")
+        raise
+
+def test_nav_download_redirect(driver,reset_state):
+    try:
+        logger.info("點擊下載專區並檢查跳轉")
+        # 先找到主選單容器並滾動
+        menu_wrapper = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "mMainmenu-wrap"))
+        )
+        driver.execute_script("arguments[0].scrollIntoView({block: 'start', behavior: 'smooth'});", menu_wrapper)
+        time.sleep(2)
         
-#         time.sleep(2)
-#         assert "download" in driver.current_url, "未跳轉至下載專區頁面"
-#         logger.info("下載專區跳轉測試通過")
-#     except Exception as e:
-#         logger.error(f"下載專區跳轉測試失敗: {str(e)}")
-#         raise
+        download_link = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "mmDownload"))
+        )
+        download_link.click()
+        
+        time.sleep(2)
+        assert "download" in driver.current_url, "未跳轉至下載專區頁面"
+        logger.info("下載專區跳轉測試通過")
+    except Exception as e:
+        logger.error(f"下載專區跳轉測試失敗: {str(e)}")
+        raise
 
 
 def test_nav_member_not_clickable(driver, reset_state):
@@ -650,6 +651,9 @@ def test_news_submenu_links(driver, reset_state):
         # 定義要測試的子選單錨點
         anchors = ["全部", "活動", "更新", "重要"]
 
+        # 儲存原始窗口句柄
+        original_window = driver.current_window_handle
+
         # 測試子選單中的四個錨點
         for anchor_text in anchors:
             logger.info(f"測試子選單錨點: {anchor_text}")
@@ -700,7 +704,6 @@ def test_news_submenu_links(driver, reset_state):
             
             for pid in new_processes:
                 process_name = after_processes.get(pid, "").lower()
-                # 擴展條件，包含 Outlook (New) 可能的進程
                 if any(x in process_name for x in ["mailapp", "outlook", "thunderbird", "olk"]):
                     email_process = psutil.Process(pid)
                     logger.info(f"偵測到新 email 進程: {process_name} (PID: {pid})")
@@ -711,7 +714,7 @@ def test_news_submenu_links(driver, reset_state):
 
         if email_process:
             try:
-                email_process.kill()  # 改用 kill() 強制關閉
+                email_process.kill()
                 logger.info(f"已強制關閉 email 進程: {email_process.name()} (PID: {email_process.pid})")
             except psutil.NoSuchProcess:
                 logger.info("email 進程已自行關閉")
@@ -729,66 +732,419 @@ def test_news_submenu_links(driver, reset_state):
         logger.error(f"最新消息子選單連結測試失敗: {str(e)}")
         raise
 
-# @pytest.mark.dependency()
-# def test_nav_books_buttons_redirect(driver):
-#     try:
-#         logger.info("檢查楓葉圖書按鈕連結")
-#         books_btn = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CSS_SELECTOR, ".nav-books-btn"))
-#         )
-#         books_btn.click()
-#         time.sleep(2)
-#         assert "books" in driver.current_url, "楓葉圖書按鈕連結異常"
-#         logger.info("楓葉圖書按鈕連結測試通過")
-#     except Exception as e:
-#         logger.error(f"楓葉圖書按鈕連結測試失敗: {str(e)}")
-#         raise
+def test_maplebook_submenu_links(driver, reset_state):
+    try:
+        logger.info("開始測試楓葉圖書子選單連結功能")
+        
+        # 主選單容器
+        menu_wrapper = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "mMainmenu-wrap"))
+        )
+        driver.execute_script("arguments[0].scrollIntoView({block: 'start', behavior: 'smooth'});", menu_wrapper)
+        time.sleep(0.5)
 
-# @pytest.mark.dependency()
-# def test_nav_download_buttons_redirect(driver):
-#     try:
-#         logger.info("檢查下載專區按鈕連結")
-#         download_btn = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CSS_SELECTOR, ".nav-download-btn"))
-#         )
-#         download_btn.click()
-#         time.sleep(2)
-#         assert "download" in driver.current_url, "下載專區按鈕連結異常"
-#         logger.info("下載專區按鈕連結測試通過")
-#     except Exception as e:
-#         logger.error(f"下載專區按鈕連結測試失敗: {str(e)}")
-#         raise
+        # Hover 展開楓葉圖書子選單
+        maplebook_link = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "mmMedia"))
+        )
+        ActionChains(driver).move_to_element(maplebook_link).perform()
+        time.sleep(0.5)
 
-# @pytest.mark.dependency()
-# def test_nav_member_buttons_redirect(driver):
-#     try:
-#         logger.info("檢查楓葉會員按鈕連結")
-#         member_btn = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CSS_SELECTOR, ".nav-member-btn"))
-#         )
-#         member_btn.click()
-#         time.sleep(2)
-#         assert "member" in driver.current_url, "楓葉會員按鈕連結異常"
-#         logger.info("楓葉會員按鈕連結測試通過")
-#     except Exception as e:
-#         logger.error(f"楓葉會員按鈕連結測試失敗: {str(e)}")
-#         raise
+        # 檢查子選單
+        submenu = WebDriverWait(driver, 20).until(
+            EC.visibility_of_element_located((By.XPATH, "//a[@class='mMenumenu-cate-link mmMedia']/following-sibling::div[@class='mMenumenu-sub']"))
+        )
+        assert submenu.is_displayed(), "楓葉圖書子選單未展開"
+        submenu_links = submenu.find_elements(By.TAG_NAME, "a")
+        logger.info(f"子選單中找到 {len(submenu_links)} 個連結")
 
-# @pytest.mark.dependency()
-# def test_nav_hk_buttons_redirect(driver):
-#     try:
-#         logger.info("檢查香港專區按鈕連結")
-#         hk_btn = WebDriverWait(driver, 20).until(
-#             EC.element_to_be_clickable((By.CSS_SELECTOR, ".nav-hk-btn"))
-#         )
-#         hk_btn.click()
-#         time.sleep(2)
-#         assert "hk" in driver.current_url, "香港專區按鈕連結異常"
-#         logger.info("香港專區按鈕連結測試通過")
-#     except Exception as e:
-#         logger.error(f"香港專區按鈕連結測試失敗: {str(e)}")
-#         raise
+        # 定義子選單錨點
+        anchors = [
+            {"text": "職業介紹", "class": "mmRoles"},
+            {"text": "系統介紹", "class": "mmSys"},
+            {"text": "多媒體園地", "class": "mmArt"},
+            {"text": "機率型道具說明", "href": "https://tw-event.beanfun.com/MapleStory/eventad/EventAD.aspx?EventADID=5325", "new_window": True},
+            {"text": "聯盟戰地排行榜", "href": "https://tw-event.beanfun.com/MapleStory/UnionWebRank/Index.aspx", "redirect": True},
+            {"text": "初入遊戲說明", "href": "https://tw-event.beanfun.com/MapleStory/eventad/EventAD.aspx?EventADID=10121", "new_window": True}
+        ]
 
+        # 儲存原始窗口句柄
+        original_window = driver.current_window_handle
+
+        # 測試子選單錨點
+        for anchor in anchors:
+            logger.info(f"測試子選單錨點: {anchor['text']}")
+            if "href" in anchor:
+                link = WebDriverWait(driver, 20).until(
+                    EC.element_to_be_clickable((By.XPATH, f"//div[@class='mMenumenu-sub']//a[contains(@href, '{anchor['href']}')]"))
+                )
+            else:
+                link = WebDriverWait(driver, 20).until(
+                    EC.element_to_be_clickable((By.XPATH, f"//div[@class='mMenumenu-sub']//a[contains(@class, '{anchor['class']}')]"))
+                )
+            
+            driver.execute_script("arguments[0].scrollIntoView({block: 'center', behavior: 'smooth'});", link)
+            time.sleep(0.5)
+            initial_y = driver.execute_script("return window.scrollY;")
+            logger.info(f"點擊前 class: {link.get_attribute('class')}")
+            logger.info(f"點擊前位置: {link.location}, 大小: {link.size}, 視窗 Y: {initial_y}")
+
+            # 點擊連結
+            actions = ActionChains(driver)
+            actions.move_to_element(maplebook_link).pause(0.5).move_to_element(link).pause(0.5).click(link).perform()
+            time.sleep(1)
+
+            # 根據連結類型處理
+            if anchor.get("new_window", False):
+                try:
+                    WebDriverWait(driver, 5).until(lambda driver: len(driver.window_handles) > 1)
+                    logger.info(f"{anchor['text']} 開啟新窗口")
+                    new_window = [handle for handle in driver.window_handles if handle != original_window][0]
+                    driver.switch_to.window(new_window)
+                    logger.info(f"新窗口 URL: {driver.current_url}")
+                    driver.close()
+                    driver.switch_to.window(original_window)
+                except TimeoutException:
+                    logger.error(f"{anchor['text']} 未開啟新窗口，預期 target='_blank' 行為失敗，當前窗口數: {len(driver.window_handles)}")
+                    raise
+            elif anchor.get("redirect", False):
+                try:
+                    WebDriverWait(driver, 10).until(
+                        lambda driver: "UnionWebRank" in driver.current_url,
+                        f"{anchor['text']} 未跳轉到預期頁面"
+                    )
+                    logger.info(f"已跳轉到 URL: {driver.current_url}")
+                    driver.back()
+                    time.sleep(2)
+                    maplebook_link = WebDriverWait(driver, 20).until(
+                        EC.element_to_be_clickable((By.CLASS_NAME, "mmMedia"))
+                    )
+                    ActionChains(driver).move_to_element(maplebook_link).perform()
+                    submenu = WebDriverWait(driver, 20).until(
+                        EC.visibility_of_element_located((By.XPATH, "//a[@class='mMenumenu-cate-link mmMedia']/following-sibling::div[@class='mMenumenu-sub']"))
+                    )
+                    assert submenu.is_displayed(), f"返回後楓葉圖書子選單未展開"
+                except TimeoutException:
+                    logger.error(f"{anchor['text']} 未跳轉到預期頁面，當前 URL: {driver.current_url}")
+                    raise
+            else:
+                assert submenu.is_displayed(), f"點擊 {anchor['text']} 後子選單關閉"
+                new_y = driver.execute_script("return window.scrollY;")
+                logger.info(f"點擊後視窗 Y: {new_y}")
+                if new_y == initial_y:
+                    logger.info(f"{anchor['text']} 未觸發視窗滑動，可能是正常行為")
+
+        logger.info("楓葉圖書子選單連結測試通過")
+        
+    except Exception as e:
+        logger.error(f"楓葉圖書子選單連結測試失敗: {str(e)}")
+        raise
+
+def test_download_submenu_links(driver, reset_state):
+    try:
+        logger.info("開始測試下載專區子選單連結功能")
+        
+        # 主選單容器
+        menu_wrapper = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "mMainmenu-wrap"))
+        )
+        driver.execute_script("arguments[0].scrollIntoView({block: 'start', behavior: 'smooth'});", menu_wrapper)
+        time.sleep(0.5)
+
+        # Hover 展開下載專區子選單
+        download_link = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "mmDownload"))
+        )
+        ActionChains(driver).move_to_element(download_link).perform()
+        time.sleep(0.5)
+
+        # 檢查子選單
+        submenu = WebDriverWait(driver, 20).until(
+            EC.visibility_of_element_located((By.XPATH, "//a[@class='mMenumenu-cate-link mmDownload']/following-sibling::div[@class='mMenumenu-sub']"))
+        )
+        assert submenu.is_displayed(), "下載專區子選單未展開"
+        submenu_links = submenu.find_elements(By.TAG_NAME, "a")
+        logger.info(f"子選單中找到 {len(submenu_links)} 個連結")
+
+        # 關閉浮動按鈕
+        try:
+            watermarker = driver.find_element(By.CLASS_NAME, "mWatermarker")
+            if watermarker.is_displayed():
+                close_button = WebDriverWait(driver, 5).until(
+                    EC.element_to_be_clickable((By.CLASS_NAME, "mWatermarker-close"))
+                )
+                close_button.click()
+                logger.info("已關閉浮動按鈕")
+                time.sleep(0.5)
+                ActionChains(driver).move_to_element(download_link).perform()
+                time.sleep(0.5)
+                assert submenu.is_displayed(), "關閉浮動按鈕後子選單關閉"
+        except TimeoutException:
+            logger.info("未找到浮動按鈕或關閉按鈕，繼續測試")
+
+        # 定義子選單錨點
+        anchors = [
+            {"text": "遊戲主程式", "href": "https://maplestory.beanfun.com/download", "redirect": True},
+            {"text": "遊戲更新檔案", "href": "https://maplestory.beanfun.com/download?download_type=2", "redirect": True},
+            {"text": "完整安裝說明", "href": "https://maplestory.beanfun.com/download?ins=install", "redirect": True},
+            {"text": "手動更新說明", "href": "https://maplestory.beanfun.com/download?ins=update", "redirect": True},
+            {"text": "遊戲配備需求", "href": "https://maplestory.beanfun.com/download?ins=require", "redirect": True}
+        ]
+
+        # 儲存原始窗口句柄
+        original_window = driver.current_window_handle
+
+        # 測試子選單錨點
+        for anchor in anchors:
+            logger.info(f"測試子選單錨點: {anchor['text']}")
+            link = WebDriverWait(driver, 20).until(
+                EC.element_to_be_clickable((By.XPATH, f"//div[@class='mMenumenu-sub']//a[contains(@href, '{anchor['href']}')]"))
+            )
+            
+            driver.execute_script("arguments[0].scrollIntoView({block: 'center', behavior: 'smooth'});", link)
+            time.sleep(0.5)
+            initial_y = driver.execute_script("return window.scrollY;")
+            logger.info(f"點擊前 class: {link.get_attribute('class')}")
+            logger.info(f"點擊前位置: {link.location}, 大小: {link.size}, 視窗 Y: {initial_y}")
+
+            # 點擊連結
+            actions = ActionChains(driver)
+            actions.move_to_element(download_link).pause(0.5).move_to_element(link).pause(0.5).click(link).perform()
+            time.sleep(1)
+
+            # 處理跳轉
+            if anchor.get("redirect", False):
+                try:
+                    WebDriverWait(driver, 10).until(
+                        lambda driver: anchor["href"] in driver.current_url,
+                        f"{anchor['text']} 未跳轉到預期頁面"
+                    )
+                    logger.info(f"已跳轉到 URL: {driver.current_url}")
+                    driver.back()
+                    time.sleep(2)
+                    download_link = WebDriverWait(driver, 20).until(
+                        EC.element_to_be_clickable((By.CLASS_NAME, "mmDownload"))
+                    )
+                    ActionChains(driver).move_to_element(download_link).perform()
+                    submenu = WebDriverWait(driver, 20).until(
+                        EC.visibility_of_element_located((By.XPATH, "//a[@class='mMenumenu-cate-link mmDownload']/following-sibling::div[@class='mMenumenu-sub']"))
+                    )
+                    assert submenu.is_displayed(), f"返回後下載專區子選單未展開"
+                except TimeoutException:
+                    logger.error(f"{anchor['text']} 未跳轉到預期頁面，當前 URL: {driver.current_url}")
+                    raise
+
+        logger.info("下載專區子選單連結測試通過")
+        
+    except Exception as e:
+        logger.error(f"下載專區子選單連結測試失敗: {str(e)}")
+        raise
+
+def test_membership_submenu_links(driver, reset_state):
+    try:
+        logger.info("開始測試楓葉會員子選單連結功能")
+        
+        # 一開始滑動到 y=1000
+        driver.execute_script("window.scrollTo(0, 1000);")
+        time.sleep(1)
+
+        # Hover 展開楓葉會員子選單
+        membership_link = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.XPATH, "//a[@class='mMenumenu-cate-link' and contains(text(), '楓葉會員')]"))
+        )
+        ActionChains(driver).move_to_element(membership_link).perform()
+        time.sleep(1)
+
+        # 檢查子選單
+        submenu = WebDriverWait(driver, 20).until(
+            EC.visibility_of_element_located((By.XPATH, "//a[contains(text(), '楓葉會員')]/following-sibling::div[@class='mMenumenu-sub']"))
+        )
+        assert submenu.is_displayed(), "楓葉會員子選單未展開"
+        submenu_links = submenu.find_elements(By.TAG_NAME, "a")
+        logger.info(f"子選單中找到 {len(submenu_links)} 個連結")
+
+        # 定義子選單錨點
+        anchors = [
+            {"text": "修改第二組密碼", "href": "https://tw-event.beanfun.com/MapleStory/SetSecondPassword/index.aspx", "new_window": True},
+            {"text": "客服中心", "href": "https://tw.beanfun.com/customerservice/www/main.aspx", "new_window": True},
+            {"text": "外掛檢舉專區", "href": "https://event.beanfun.com/customerservice/PluginReporting/PluginBoard/PluginBoardJQ.aspx", "new_window": True},
+            {"text": "道具兌換專區", "href": "https://tw-event.beanfun.com/maplestory/ItemToGame/Item_List.aspx", "new_window": True},
+            {"text": "遊戲帳號申請", "href": "https://bfweb.beanfun.com/Register/register", "new_window": True},
+            {"text": "序號查詢", "href": "https://maplestory.beanfun.com/sn_query", "redirect": True, "expected_url": "https://tw.newlogin.beanfun.com/loginform.aspx"},
+            {"text": "遊戲管理規章", "href": "https://maplestory.beanfun.com/policy", "redirect": True},
+            {"text": "Code of Conduct", "href": "https://maplestory.beanfun.com/policy?section=content07", "redirect": True},
+            {"text": "處罰名單", "href": "https://maplestory.beanfun.com/blacklist", "redirect": True}
+        ]
+
+        # 儲存原始窗口句柄
+        original_window = driver.current_window_handle
+
+        # 測試子選單錨點
+        for anchor in anchors:
+            logger.info(f"測試子選單錨點: {anchor['text']}")
+            link = WebDriverWait(driver, 20).until(
+                EC.element_to_be_clickable((By.XPATH, f"//div[@class='mMenumenu-sub']//a[contains(@href, '{anchor['href']}')]"))
+            )
+            
+            driver.execute_script("window.scrollTo(0, 1000);")
+            time.sleep(1)
+            ActionChains(driver).move_to_element(membership_link).perform()
+            time.sleep(1)
+            
+            initial_y = driver.execute_script("return window.scrollY;")
+            logger.info(f"點擊前 class: {link.get_attribute('class')}")
+            logger.info(f"點擊前位置: {link.location}, 大小: {link.size}, 視窗 Y: {initial_y}")
+
+            # 點擊連結
+            actions = ActionChains(driver)
+            actions.move_to_element(membership_link).pause(1).move_to_element(link).pause(1).click(link).perform()
+            time.sleep(1)
+
+            # 根據連結類型處理
+            if anchor.get("new_window", False):
+                try:
+                    WebDriverWait(driver, 5).until(lambda driver: len(driver.window_handles) > 1)
+                    logger.info(f"{anchor['text']} 開啟新窗口")
+                    new_window = [handle for handle in driver.window_handles if handle != original_window][0]
+                    driver.switch_to.window(new_window)
+                    logger.info(f"新窗口 URL: {driver.current_url}")
+                    driver.close()
+                    driver.switch_to.window(original_window)
+                except TimeoutException:
+                    logger.error(f"{anchor['text']} 未開啟新窗口，預期 target='_blank' 行為失敗，當前窗口數: {len(driver.window_handles)}")
+                    raise
+            elif anchor.get("redirect", False):
+                try:
+                    if anchor["text"] == "序號查詢":
+                        expected_url = anchor["expected_url"]
+                        WebDriverWait(driver, 10).until(
+                            lambda driver: expected_url in driver.current_url,
+                            f"{anchor['text']} 未跳轉到預期登入頁面"
+                        )
+                    else:
+                        WebDriverWait(driver, 10).until(
+                            lambda driver: anchor["href"] in driver.current_url,
+                            f"{anchor['text']} 未跳轉到預期頁面"
+                        )
+                    logger.info(f"已跳轉到 URL: {driver.current_url}")
+                    driver.get('https://maplestory.beanfun.com/main')
+                    time.sleep(2)
+                    driver.execute_script("window.scrollTo(0, 1000);")
+                    time.sleep(1)
+                    membership_link = WebDriverWait(driver, 20).until(
+                        EC.element_to_be_clickable((By.XPATH, "//a[@class='mMenumenu-cate-link' and contains(text(), '楓葉會員')]"))
+                    )
+                    ActionChains(driver).move_to_element(membership_link).perform()
+                    submenu = WebDriverWait(driver, 20).until(
+                        EC.visibility_of_element_located((By.XPATH, "//a[contains(text(), '楓葉會員')]/following-sibling::div[@class='mMenumenu-sub']"))
+                    )
+                    assert submenu.is_displayed(), f"返回後楓葉會員子選單未展開"
+                except TimeoutException:
+                    logger.error(f"{anchor['text']} 未跳轉到預期頁面，當前 URL: {driver.current_url}")
+                    raise
+
+        logger.info("楓葉會員子選單連結測試通過")
+        
+    except Exception as e:
+        logger.error(f"楓葉會員子選單連結測試失敗: {str(e)}")
+        raise
+
+def test_hongkong_submenu_links(driver, reset_state):
+    try:
+        logger.info("開始測試香港專區子選單連結功能")
+        
+        # 一開始滑動到 y=1000
+        driver.execute_script("window.scrollTo(0, 1000);")
+        time.sleep(2)
+
+        # Hover 展開香港專區子選單
+        hongkong_link = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.XPATH, "//a[contains(@class, 'mMenumenu-cate-link') and contains(text(), '香港專區')]"))
+        )
+        logger.info("成功定位到 '香港專區' 主連結")
+        ActionChains(driver).move_to_element(hongkong_link).perform()
+        time.sleep(1)
+
+        # 檢查子選單
+        submenu = WebDriverWait(driver, 20).until(
+            EC.visibility_of_element_located((By.XPATH, "//a[contains(text(), '香港專區')]/following-sibling::div[@class='mMenumenu-sub']"))
+        )
+        assert submenu.is_displayed(), "香港專區子選單未展開"
+        submenu_links = submenu.find_elements(By.TAG_NAME, "a")
+        logger.info(f"子選單中找到 {len(submenu_links)} 個連結")
+
+        # 定義子選單連結
+        submenu_items = [
+            {"text": "申請會員帳號(港澳)", "href": "https://bfweb.hk.beanfun.com/beanfun_web_ap/signup/", "new_window": True},
+            {"text": "創建遊戲帳號", "href": "https://bfweb.hk.beanfun.com/game_zone/", "new_window": True},
+            {"text": "客服中心(港澳)", "href": "https://csp.hk.beanfun.com/", "new_window": True, "has_alert": True},
+            {"text": "香港官網", "href": "https://bfweb.hk.beanfun.com/", "new_window": True}
+        ]
+
+        # 儲存原始窗口句柄
+        original_window = driver.current_window_handle
+
+        # 測試子選單連結
+        for item in submenu_items:
+            logger.info(f"測試子選單連結: {item['text']}")
+            
+            driver.execute_script("window.scrollTo(0, 1000);")
+            time.sleep(1)
+            hongkong_link = WebDriverWait(driver, 20).until(
+                EC.element_to_be_clickable((By.XPATH, "//a[contains(@class, 'mMenumenu-cate-link') and contains(text(), '香港專區')]"))
+            )
+            ActionChains(driver).move_to_element(hongkong_link).perform()
+            submenu = WebDriverWait(driver, 20).until(
+                EC.visibility_of_element_located((By.XPATH, "//a[contains(text(), '香港專區')]/following-sibling::div[@class='mMenumenu-sub']"))
+            )
+            assert submenu.is_displayed(), f"測試 {item['text']} 前子選單未展開"
+            
+            link = WebDriverWait(driver, 20).until(
+                EC.element_to_be_clickable((By.XPATH, f"//div[@class='mMenumenu-sub']//a[contains(@href, '{item['href']}') and contains(text(), '{item['text']}')]"))
+            )
+            
+            initial_y = driver.execute_script("return window.scrollY;")
+            logger.info(f"點擊前 class: {link.get_attribute('class')}")
+            logger.info(f"點擊前位置: {link.location}, 大小: {link.size}, 視窗 Y: {initial_y}")
+
+            # 點擊連結
+            actions = ActionChains(driver)
+            actions.move_to_element(hongkong_link).pause(1).move_to_element(link).pause(1).click(link).perform()
+            time.sleep(2)
+
+            # 處理新窗口
+            if item.get("new_window", False):
+                current_windows = driver.window_handles
+                logger.info(f"當前窗口數: {len(current_windows)}")
+                
+                if len(current_windows) > 1:
+                    new_window = [handle for handle in current_windows if handle != original_window][0]
+                    logger.info(f"{item['text']} 開啟新窗口")
+                    
+                    if item.get("has_alert", False):
+                        logger.info(f"{item['text']} 檢測到可能有 alert，直接關閉新窗口")
+                        driver.execute_script("window.close();", driver.switch_to.window(new_window))
+                    else:
+                        driver.switch_to.window(new_window)
+                        logger.info(f"新窗口 URL: {driver.current_url}")
+                        WebDriverWait(driver, 10).until(
+                            lambda driver: driver.execute_script("return document.readyState") == "complete"
+                        )
+                        logger.info(f"{item['text']} 頁面載入完成")
+                        driver.close()
+                    
+                    driver.switch_to.window(original_window)
+                    time.sleep(1)
+                else:
+                    logger.error(f"{item['text']} 未開啟新窗口，測試失敗")
+                    raise Exception(f"{item['text']} 未如預期開啟新窗口")
+
+        logger.info("香港專區子選單連結測試通過")
+        
+    except Exception as e:
+        logger.error(f"香港專區子選單連結測試失敗: {str(e)}")
+        raise
+        
 # @pytest.mark.dependency()
 # def test_ad_banner_display_normal(driver):
 #     try:
