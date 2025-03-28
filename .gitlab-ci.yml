@@ -1,0 +1,18 @@
+stages:
+  - test
+
+pytest_job:
+  stage: test
+  image: python:3.12  # 使用 Python 3.12
+  before_script:
+    - pip install -r requirements.txt  # 安裝依賴
+  script:
+    - REPORT_NAME="report_$(date +'%Y-%m-%d_%H-%M-%S').html"  # 動態生成報告名稱，例如 report_2025-03-27_15-30-00.html
+    - pytest tests/ -v --html="$REPORT_NAME" --self-contained-html  # 使用動態名稱生成報告
+    - echo "Test run completed at $(date)"  # 日誌中顯示完成時間
+  artifacts:
+    paths:
+      - "report_*.html"  # 匹配帶時間戳的報告檔案
+    expire_in: 1 week  # 保留一週
+  rules:
+    - if: '$CI_COMMIT_BRANCH'  # 在所有分支推送時觸發

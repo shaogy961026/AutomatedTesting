@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title id="head-title">report.html</title>
+      <link href="assets\style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <h1 id="title">report.html</h1>
+    <p>Report generated on 27-Mar-2025 at 16:16:12 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+        v4.1.1</p>
+    <div id="environment-header">
+      <h2>Environment</h2>
+    </div>
+    <table id="environment"></table>
+    <!-- TEMPLATES -->
+      <template id="template_environment_row">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+    <template id="template_results-table__body--empty">
+      <tbody class="results-table-row">
+        <tr id="not-found-message">
+          <td colspan="4">No results found. Check the filters.</th>
+        </tr>
+    </template>
+    <template id="template_results-table__tbody">
+      <tbody class="results-table-row">
+        <tr class="collapsible">
+        </tr>
+        <tr class="extras-row">
+          <td class="extra" colspan="4">
+            <div class="extraHTML"></div>
+            <div class="media">
+              <div class="media-container">
+                  <div class="media-container__nav--left"><</div>
+                  <div class="media-container__viewport">
+                    <img src="" />
+                    <video controls>
+                      <source src="" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="media-container__nav--right">></div>
+                </div>
+                <div class="media__name"></div>
+                <div class="media__counter"></div>
+            </div>
+            <div class="logwrapper">
+              <div class="logexpander"></div>
+              <div class="log"></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </template>
+    <!-- END TEMPLATES -->
+    <div class="summary">
+      <div class="summary__data">
+        <h2>Summary</h2>
+        <div class="additional-summary prefix">
+        </div>
+        <p class="run-count">39 tests took 00:06:38.</p>
+        <p class="filter">(Un)check the boxes to filter the results.</p>
+        <div class="summary__reload">
+          <div class="summary__reload__button hidden" onclick="location.reload()">
+            <div>There are still tests running. <br />Reload this page to get the latest results!</div>
+          </div>
+        </div>
+        <div class="summary__spacer"></div>
+        <div class="controls">
+          <div class="filters">
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" disabled/>
+            <span class="failed">0 Failed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" />
+            <span class="passed">39 Passed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="skipped" disabled/>
+            <span class="skipped">0 Skipped,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xfailed" disabled/>
+            <span class="xfailed">0 Expected failures,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xpassed" disabled/>
+            <span class="xpassed">0 Unexpected passes,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="error" disabled/>
+            <span class="error">0 Errors,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="rerun" disabled/>
+            <span class="rerun">0 Reruns</span>
+          </div>
+          <div class="collapse">
+            <button id="show_all_details">Show all details</button>&nbsp;/&nbsp;<button id="hide_all_details">Hide all details</button>
+          </div>
+        </div>
+      </div>
+      <div class="additional-summary summary">
+      </div>
+      <div class="additional-summary postfix">
+      </div>
+    </div>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable" data-column-type="result">Result</th>
+          <th class="sortable" data-column-type="testId">Test</th>
+          <th class="sortable" data-column-type="duration">Duration</th>
+          <th>Links</th>
+        </tr>
+      </thead>
+    </table>
+  </body>
+  <footer>
+    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.12.4&#34;, &#34;Platform&#34;: &#34;Windows-11-10.0.22631-SP0&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;7.4.4&#34;, &#34;pluggy&#34;: &#34;1.0.0&#34;}, &#34;Plugins&#34;: {&#34;anyio&#34;: &#34;4.2.0&#34;, &#34;dependency&#34;: &#34;0.6.0&#34;, &#34;html&#34;: &#34;4.1.1&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;}, &#34;JAVA_HOME&#34;: &#34;C:\\Program Files\\Java\\jdk-22&#34;}, &#34;tests&#34;: {&#34;test_basic_settings.py::test_page_display_normal&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_basic_settings.py::test_page_display_normal&#34;, &#34;duration&#34;: &#34;00:00:08&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_basic_settings.py::test_page_display_normal&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:08&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\nINFO:browser_setup:ChromeDriver \u8def\u5f91: C:\\Users\\willisshao\\Desktop\\AutomatedTesting\\chromedriver.exe\nINFO:browser_setup:\u5f9e\u8a2d\u5b9a\u6a94\u8b80\u53d6\u5c3a\u5bf8: 1616x878\nINFO:browser_setup:\u9a57\u8b49\u5c3a\u5bf8: innerWidth=1602, innerHeight=732\nINFO:conftest:\u958b\u59cb\u52a0\u8f09\u7db2\u9801\nINFO:conftest:\u9801\u9762\u52a0\u8f09\u5b8c\u6210\n\n------------------------------ Captured log setup ------------------------------\nINFO     browser_setup:browser_setup.py:21 ChromeDriver \u8def\u5f91: C:\\Users\\willisshao\\Desktop\\AutomatedTesting\\chromedriver.exe\nINFO     browser_setup:browser_setup.py:29 \u5f9e\u8a2d\u5b9a\u6a94\u8b80\u53d6\u5c3a\u5bf8: 1616x878\nINFO     browser_setup:browser_setup.py:41 \u9a57\u8b49\u5c3a\u5bf8: innerWidth=1602, innerHeight=732\nINFO     conftest:conftest.py:12 \u958b\u59cb\u52a0\u8f09\u7db2\u9801\nINFO     conftest:conftest.py:15 \u9801\u9762\u52a0\u8f09\u5b8c\u6210\n\n----------------------------- Captured stderr call -----------------------------\nINFO:test_basic_settings:\u6aa2\u67e5\u9801\u9762\u662f\u5426\u6b63\u5e38\u986f\u793a\nINFO:test_basic_settings:\u9801\u9762\u4e3b\u9ad4\u5df2\u52a0\u8f09\nINFO:test_basic_settings:\u9801\u9762\u986f\u793a\u6b63\u5e38\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_basic_settings:test_basic_settings.py:15 \u6aa2\u67e5\u9801\u9762\u662f\u5426\u6b63\u5e38\u986f\u793a\nINFO     test_basic_settings:test_basic_settings.py:19 \u9801\u9762\u4e3b\u9ad4\u5df2\u52a0\u8f09\nINFO     test_basic_settings:test_basic_settings.py:21 \u9801\u9762\u986f\u793a\u6b63\u5e38\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_basic_settings.py::test_page_title_display_correct&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_basic_settings.py::test_page_title_display_correct&#34;, &#34;duration&#34;: &#34;933 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_basic_settings.py::test_page_title_display_correct&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;933 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_basic_settings:\u6aa2\u67e5\u9801\u9762\u6a19\u984c\u662f\u5426\u6b63\u78ba\nINFO:test_basic_settings:\u7576\u524d\u6a19\u984c: \u65b0\u6953\u4e4b\u8c37 maplestory \u6700\u5718\u7d50\u7684\u5192\u96aa\uff01\nINFO:test_basic_settings:\u9801\u9762\u6a19\u984c\u986f\u793a\u6b63\u78ba\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_basic_settings:test_basic_settings.py:28 \u6aa2\u67e5\u9801\u9762\u6a19\u984c\u662f\u5426\u6b63\u78ba\nINFO     test_basic_settings:test_basic_settings.py:30 \u7576\u524d\u6a19\u984c: \u65b0\u6953\u4e4b\u8c37 maplestory \u6700\u5718\u7d50\u7684\u5192\u96aa\uff01\nINFO     test_basic_settings:test_basic_settings.py:32 \u9801\u9762\u6a19\u984c\u986f\u793a\u6b63\u78ba\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_basic_settings.py::test_page_reload_no_layout_error&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_basic_settings.py::test_page_reload_no_layout_error&#34;, &#34;duration&#34;: &#34;00:00:04&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_basic_settings.py::test_page_reload_no_layout_error&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:04&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_basic_settings:\u91cd\u65b0\u8f09\u5165\u9801\u9762\nINFO:test_basic_settings:\u6aa2\u67e5\u9801\u9762\u4f48\u5c40\nINFO:test_basic_settings:\u9801\u9762\u91cd\u65b0\u8f09\u5165\u7121\u932f\u8aa4\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_basic_settings:test_basic_settings.py:39 \u91cd\u65b0\u8f09\u5165\u9801\u9762\nINFO     test_basic_settings:test_basic_settings.py:42 \u6aa2\u67e5\u9801\u9762\u4f48\u5c40\nINFO     test_basic_settings:test_basic_settings.py:47 \u9801\u9762\u91cd\u65b0\u8f09\u5165\u7121\u932f\u8aa4\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_basic_settings.py::test_page_navigation_no_layout_error&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_basic_settings.py::test_page_navigation_no_layout_error&#34;, &#34;duration&#34;: &#34;00:00:07&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_basic_settings.py::test_page_navigation_no_layout_error&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:07&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_basic_settings:\u6a21\u64ec\u9ede\u64ca\u4e0a\u4e00\u9801\nINFO:test_basic_settings:\u6a21\u64ec\u9ede\u64ca\u4e0b\u4e00\u9801\nINFO:test_basic_settings:\u9801\u9762\u5207\u63db\u7121\u932f\u8aa4\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_basic_settings:test_basic_settings.py:54 \u6a21\u64ec\u9ede\u64ca\u4e0a\u4e00\u9801\nINFO     test_basic_settings:test_basic_settings.py:57 \u6a21\u64ec\u9ede\u64ca\u4e0b\u4e00\u9801\nINFO     test_basic_settings:test_basic_settings.py:64 \u9801\u9762\u5207\u63db\u7121\u932f\u8aa4\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_basic_settings.py::test_browser_tab_switch_no_layout_error&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_basic_settings.py::test_browser_tab_switch_no_layout_error&#34;, &#34;duration&#34;: &#34;00:00:06&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_basic_settings.py::test_browser_tab_switch_no_layout_error&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:06&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_basic_settings:\u6a21\u64ec\u958b\u65b0\u5206\u9801\u4e26\u5207\u63db\nINFO:test_basic_settings:\u5206\u9801\u5207\u63db\u7121\u932f\u8aa4\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_basic_settings:test_basic_settings.py:71 \u6a21\u64ec\u958b\u65b0\u5206\u9801\u4e26\u5207\u63db\nINFO     test_basic_settings:test_basic_settings.py:81 \u5206\u9801\u5207\u63db\u7121\u932f\u8aa4\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_basic_settings.py::test_pc_loading_animation_on_first_visit&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_basic_settings.py::test_pc_loading_animation_on_first_visit&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_basic_settings.py::test_pc_loading_animation_on_first_visit&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_basic_settings:\u6e05\u7a7a\u700f\u89bd\u5668\u7de9\u5b58\u548ccookies\nINFO:test_basic_settings:\u6aa2\u67e5\u9032\u7ad9\u52d5\u756b\u662f\u5426\u5728\u9801\u9762\u8f09\u5165\u6642\u51fa\u73fe\u4e26\u64ad\u653e\nINFO:test_basic_settings:\u627e\u5230\u9032\u7ad9\u52d5\u756bvideo\u5143\u7d20\nINFO:test_basic_settings:\u9032\u7ad9\u52d5\u756b\u53ef\u898b\nINFO:test_basic_settings:\u9032\u7ad9\u52d5\u756b\u81ea\u52d5\u64ad\u653e\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_basic_settings:test_basic_settings.py:89 \u6e05\u7a7a\u700f\u89bd\u5668\u7de9\u5b58\u548ccookies\nINFO     test_basic_settings:test_basic_settings.py:95 \u6aa2\u67e5\u9032\u7ad9\u52d5\u756b\u662f\u5426\u5728\u9801\u9762\u8f09\u5165\u6642\u51fa\u73fe\u4e26\u64ad\u653e\nINFO     test_basic_settings:test_basic_settings.py:99 \u627e\u5230\u9032\u7ad9\u52d5\u756bvideo\u5143\u7d20\nINFO     test_basic_settings:test_basic_settings.py:103 \u9032\u7ad9\u52d5\u756b\u53ef\u898b\nINFO     test_basic_settings:test_basic_settings.py:111 \u9032\u7ad9\u52d5\u756b\u81ea\u52d5\u64ad\u653e\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_example.py::test_menu_expansion&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_example.py::test_menu_expansion&#34;, &#34;duration&#34;: &#34;00:00:06&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_example.py::test_menu_expansion&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:06&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_example:\u6efe\u52d5\u5230 Y=500\nINFO:test_example:\u67e5\u627e header_link\nINFO:test_example:\u627e\u5230 header_link\nINFO:test_example:\u57f7\u884c\u61f8\u505c\u64cd\u4f5c\nINFO:test_example:\u67e5\u627e submenu\nINFO:test_example:\u627e\u5230 submenu\nINFO:test_example:Testcase 1: \u9078\u55ae\u5c55\u958b\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_example:test_example.py:16 \u6efe\u52d5\u5230 Y=500\nINFO     test_example:test_example.py:20 \u67e5\u627e header_link\nINFO     test_example:test_example.py:24 \u627e\u5230 header_link\nINFO     test_example:test_example.py:26 \u57f7\u884c\u61f8\u505c\u64cd\u4f5c\nINFO     test_example:test_example.py:30 \u67e5\u627e submenu\nINFO     test_example:test_example.py:34 \u627e\u5230 submenu\nINFO     test_example:test_example.py:37 Testcase 1: \u9078\u55ae\u5c55\u958b\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_example.py::test_page_navigation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_example.py::test_page_navigation&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_example.py::test_page_navigation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_example:\u67e5\u627e all_link\nINFO:test_example:\u627e\u5230 all_link\nINFO:test_example:\u9ede\u64ca all_link\nINFO:test_example:Testcase 2: \u9801\u9762\u6efe\u52d5\u5230 Y=1674.6666259765625\uff0c\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_example:test_example.py:45 \u67e5\u627e all_link\nINFO     test_example:test_example.py:49 \u627e\u5230 all_link\nINFO     test_example:test_example.py:51 \u9ede\u64ca all_link\nINFO     test_example:test_example.py:61 Testcase 2: \u9801\u9762\u6efe\u52d5\u5230 Y=1674.6666259765625\uff0c\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_header_mobile.py::test_mobile_no_header&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_header_mobile.py::test_mobile_no_header&#34;, &#34;duration&#34;: &#34;00:00:06&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_header_mobile.py::test_mobile_no_header&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:06&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\nINFO:conftest:\u958b\u59cb\u52a0\u8f09mobile\u7248\u7db2\u9801\nINFO:conftest:mobile\u9801\u9762\u52a0\u8f09\u5b8c\u6210\nINFO:conftest:\u624b\u6a5f\u7248: \u91cd\u7f6e\u72c0\u614b -&amp;gt; \u56de\u5230\u9996\u9801\u4e26\u6efe\u52d5\u5230\u6700\u4e0a\u65b9\n\n------------------------------ Captured log setup ------------------------------\nINFO     conftest:conftest.py:24 \u958b\u59cb\u52a0\u8f09mobile\u7248\u7db2\u9801\nINFO     conftest:conftest.py:27 mobile\u9801\u9762\u52a0\u8f09\u5b8c\u6210\nINFO     conftest:conftest.py:41 \u624b\u6a5f\u7248: \u91cd\u7f6e\u72c0\u614b -&amp;gt; \u56de\u5230\u9996\u9801\u4e26\u6efe\u52d5\u5230\u6700\u4e0a\u65b9\n\n----------------------------- Captured stderr call -----------------------------\nINFO:test_header_mobile:\u9801\u9762\u4e3b\u9ad4\u5df2\u52a0\u8f09\nINFO:test_header_mobile:\u6aa2\u67e5\u662f\u5426\u6709class=&amp;#x27;BF_MainMenu&amp;#x27;\u7684Header\u5143\u7d20\nINFO:test_header_mobile:\u627e\u5230Header\u5143\u7d20: &amp;lt;ul class=&amp;quot;BF_MainMenu&amp;quot;&amp;gt;&amp;lt;li class=&amp;quot;BF_Drop&amp;quot;&amp;gt;&amp;lt;a id=&amp;quot;BFNavi_Home&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;&amp;lt;span&amp;gt;\u904a\u6232&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;div class=&amp;quot;BF_Drop_menu&amp;quot;&amp;gt;&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;&amp;lt;a id=&amp;quot;BFNavi_OnlineGame&amp;quot; href=&amp;quot;https://tw.beanfun.com/game_zone/&amp;quot; target=&amp;quot;_top&amp;quot;&amp;gt;\u7dda\u4e0a\u904a\u6232&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;\nINFO:test_header_mobile:Header\u662f\u5426\u53ef\u898b: False\n\n------------------------------ Captured log call -------------------------------\nINFO     test_header_mobile:test_header_mobile.py:18 \u9801\u9762\u4e3b\u9ad4\u5df2\u52a0\u8f09\nINFO     test_header_mobile:test_header_mobile.py:21 \u6aa2\u67e5\u662f\u5426\u6709class=&amp;#x27;BF_MainMenu&amp;#x27;\u7684Header\u5143\u7d20\nINFO     test_header_mobile:test_header_mobile.py:27 \u627e\u5230Header\u5143\u7d20: &amp;lt;ul class=&amp;quot;BF_MainMenu&amp;quot;&amp;gt;&amp;lt;li class=&amp;quot;BF_Drop&amp;quot;&amp;gt;&amp;lt;a id=&amp;quot;BFNavi_Home&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;&amp;lt;span&amp;gt;\u904a\u6232&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;div class=&amp;quot;BF_Drop_menu&amp;quot;&amp;gt;&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;&amp;lt;a id=&amp;quot;BFNavi_OnlineGame&amp;quot; href=&amp;quot;https://tw.beanfun.com/game_zone/&amp;quot; target=&amp;quot;_top&amp;quot;&amp;gt;\u7dda\u4e0a\u904a\u6232&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;\nINFO     test_header_mobile:test_header_mobile.py:29 Header\u662f\u5426\u53ef\u898b: False\n\n&#34;}], &#34;test_header_pc.py::test_gamania_logo_redirect_to_official&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_header_pc.py::test_gamania_logo_redirect_to_official&#34;, &#34;duration&#34;: &#34;00:00:05&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_header_pc.py::test_gamania_logo_redirect_to_official&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:05&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_header_pc:\u67e5\u627e\u904a\u6232\u6a58\u5b50LOGO\nINFO:test_header_pc:LOGO\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_header_pc:test_header_pc.py:15 \u67e5\u627e\u904a\u6232\u6a58\u5b50LOGO\nINFO     test_header_pc:test_header_pc.py:22 LOGO\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_header_pc.py::test_game_dropdown_expandable&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_header_pc.py::test_game_dropdown_expandable&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_header_pc.py::test_game_dropdown_expandable&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_header_pc:\u67e5\u627e\u904a\u6232\u4e0b\u62c9\u6309\u9215\nINFO:test_header_pc:\u904a\u6232\u4e0b\u62c9\u5c55\u958b\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_header_pc:test_header_pc.py:30 \u67e5\u627e\u904a\u6232\u4e0b\u62c9\u6309\u9215\nINFO     test_header_pc:test_header_pc.py:40 \u904a\u6232\u4e0b\u62c9\u5c55\u958b\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_header_pc.py::test_game_dropdown_online_redirect&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_header_pc.py::test_game_dropdown_online_redirect&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_header_pc.py::test_game_dropdown_online_redirect&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_header_pc:\u9ede\u64ca\u7dda\u4e0a\u904a\u6232\u9078\u9805\nINFO:test_header_pc:\u7dda\u4e0a\u904a\u6232\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_header_pc:test_header_pc.py:48 \u9ede\u64ca\u7dda\u4e0a\u904a\u6232\u9078\u9805\nINFO     test_header_pc:test_header_pc.py:55 \u7dda\u4e0a\u904a\u6232\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_main_visual_display_normal&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_main_visual_display_normal&#34;, &#34;duration&#34;: &#34;905 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_main_visual_display_normal&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;905 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u6aa2\u67e5\u4e3b\u8996\u89ba\u662f\u5426\u6b63\u5e38\u986f\u793a\nINFO:test_home_pc:\u4e3b\u8996\u89ba\u986f\u793a\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:18 \u6aa2\u67e5\u4e3b\u8996\u89ba\u662f\u5426\u6b63\u5e38\u986f\u793a\nINFO     test_home_pc:test_home_pc.py:23 \u4e3b\u8996\u89ba\u986f\u793a\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_maple_story_logo_display_normal&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_maple_story_logo_display_normal&#34;, &#34;duration&#34;: &#34;941 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_maple_story_logo_display_normal&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;941 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u6aa2\u67e5\u65b0\u6953\u4e4b\u8c37LOGO\u662f\u5426\u6b63\u5e38\u986f\u793a\nINFO:test_home_pc:\u65b0\u6953\u4e4b\u8c37LOGO\u986f\u793a\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:31 \u6aa2\u67e5\u65b0\u6953\u4e4b\u8c37LOGO\u662f\u5426\u6b63\u5e38\u986f\u793a\nINFO     test_home_pc:test_home_pc.py:36 \u65b0\u6953\u4e4b\u8c37LOGO\u986f\u793a\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_helper_watermark_display_correct&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_helper_watermark_display_correct&#34;, &#34;duration&#34;: &#34;00:00:01&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_helper_watermark_display_correct&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:01&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u6aa2\u67e5\u5c0f\u5e6b\u624bfloating\u662f\u5426\u986f\u793a\u6b63\u78ba\nINFO:test_home_pc:\u5c0f\u5e6b\u624bfloating\u986f\u793a\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:107 \u6aa2\u67e5\u5c0f\u5e6b\u624bfloating\u662f\u5426\u986f\u793a\u6b63\u78ba\nINFO     test_home_pc:test_home_pc.py:112 \u5c0f\u5e6b\u624bfloating\u986f\u793a\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_helper_watermark_click_redirect&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_helper_watermark_click_redirect&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_helper_watermark_click_redirect&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u6aa2\u67e5\u5c0f\u5e6b\u624bfloating\u662f\u5426\u53ef\u4ee5\u9ede\u64ca\nINFO:test_home_pc:\u6aa2\u67e5\u9ede\u64ca\u5c0f\u5e6b\u624b\u662f\u5426\u8df3\u51fa\u5c0d\u8a71\u6846\nINFO:test_home_pc:\u5c0f\u5e6b\u624bfloating\u5c0d\u8a71\u6846\u986f\u793a\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:120 \u6aa2\u67e5\u5c0f\u5e6b\u624bfloating\u662f\u5426\u53ef\u4ee5\u9ede\u64ca\nINFO     test_home_pc:test_home_pc.py:126 \u6aa2\u67e5\u9ede\u64ca\u5c0f\u5e6b\u624b\u662f\u5426\u8df3\u51fa\u5c0d\u8a71\u6846\nINFO     test_home_pc:test_home_pc.py:131 \u5c0f\u5e6b\u624bfloating\u5c0d\u8a71\u6846\u986f\u793a\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_helper_watermark_scroll_follow&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_helper_watermark_scroll_follow&#34;, &#34;duration&#34;: &#34;00:00:04&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_helper_watermark_scroll_follow&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:04&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u6aa2\u67e5\u5c0f\u5e6b\u624bfloating\u662f\u5426\u96a8\u9801\u9762\u6ed1\u52d5\u8ddf\u96a8\nINFO:test_home_pc:\u521d\u59cb\u4f4d\u7f6e637\nINFO:test_home_pc:\u6ed1\u52d5\u81f30,500\nINFO:test_home_pc:\u65b0\u4f4d\u7f6e1134\nINFO:test_home_pc:\u5c0f\u5e6b\u624bflaoting\u8ddf\u96a8\u6e2c\u8a66\u901a\u904e\nINFO:test_home_pc:\u6ed1\u52d5\u81f30,0\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:141 \u6aa2\u67e5\u5c0f\u5e6b\u624bfloating\u662f\u5426\u96a8\u9801\u9762\u6ed1\u52d5\u8ddf\u96a8\nINFO     test_home_pc:test_home_pc.py:146 \u521d\u59cb\u4f4d\u7f6e637\nINFO     test_home_pc:test_home_pc.py:148 \u6ed1\u52d5\u81f30,500\nINFO     test_home_pc:test_home_pc.py:151 \u65b0\u4f4d\u7f6e1134\nINFO     test_home_pc:test_home_pc.py:153 \u5c0f\u5e6b\u624bflaoting\u8ddf\u96a8\u6e2c\u8a66\u901a\u904e\nINFO     test_home_pc:test_home_pc.py:155 \u6ed1\u52d5\u81f30,0\n\n&#34;}], &#34;test_home_pc.py::test_beanfun_icon_redirect&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_beanfun_icon_redirect&#34;, &#34;duration&#34;: &#34;00:00:04&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_beanfun_icon_redirect&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:04&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u9ede\u64caBeanfun Icon\u4e26\u6aa2\u67e5\u8df3\u8f49\nINFO:test_home_pc:Beanfun Icon\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:184 \u9ede\u64caBeanfun Icon\u4e26\u6aa2\u67e5\u8df3\u8f49\nINFO     test_home_pc:test_home_pc.py:192 Beanfun Icon\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_facebook_icon_redirect&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_facebook_icon_redirect&#34;, &#34;duration&#34;: &#34;00:00:04&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_facebook_icon_redirect&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:04&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u9ede\u64caFacebook Icon\u4e26\u6aa2\u67e5\u8df3\u8f49\nINFO:test_home_pc:Facebook Icon\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:202 \u9ede\u64caFacebook Icon\u4e26\u6aa2\u67e5\u8df3\u8f49\nINFO     test_home_pc:test_home_pc.py:210 Facebook Icon\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_instagram_icon_redirect&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_instagram_icon_redirect&#34;, &#34;duration&#34;: &#34;00:00:04&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_instagram_icon_redirect&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:04&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u9ede\u64caInstagram Icon\u4e26\u6aa2\u67e5\u8df3\u8f49\nINFO:test_home_pc:Instagram Icon\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:219 \u9ede\u64caInstagram Icon\u4e26\u6aa2\u67e5\u8df3\u8f49\nINFO     test_home_pc:test_home_pc.py:227 Instagram Icon\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_sound_play_normal&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_sound_play_normal&#34;, &#34;duration&#34;: &#34;00:00:04&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_sound_play_normal&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:04&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u9ede\u64ca\u97f3\u6a02ON\u6309\u9215\u4e26\u6aa2\u67e5\u64ad\u653e\nINFO:test_home_pc:\u97f3\u6a02\u64ad\u653e\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:235 \u9ede\u64ca\u97f3\u6a02ON\u6309\u9215\u4e26\u6aa2\u67e5\u64ad\u653e\nINFO     test_home_pc:test_home_pc.py:247 \u97f3\u6a02\u64ad\u653e\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_sound_close_normal&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_sound_close_normal&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_sound_close_normal&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u6e2c\u8a66\u97f3\u6a02\u95dc\u9589\u529f\u80fd\nINFO:test_home_pc:\u97f3\u6a02\u505c\u6b62\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:255 \u6e2c\u8a66\u97f3\u6a02\u95dc\u9589\u529f\u80fd\nINFO     test_home_pc:test_home_pc.py:264 \u97f3\u6a02\u505c\u6b62\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_sound_switch_normal_with_default_play&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_sound_switch_normal_with_default_play&#34;, &#34;duration&#34;: &#34;00:00:04&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_sound_switch_normal_with_default_play&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:04&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u6e2c\u8a66\u9ede\u64ca\u4e0b\u4e00\u9996\u6309\u9215\u662f\u5426\u5207\u63db\u6b4c\u66f2\nINFO:test_home_pc:\u521d\u59cb\u6b4c\u66f2\u6a19\u984c: RaindropFlower.mp3\nINFO:test_home_pc:\u521d\u59cb\u97f3\u983b src: https://tw.hicdn.beanfun.com/beanfun/WebImage/1597849677023.mp3\nINFO:test_home_pc:\u65b0\u6b4c\u66f2\u6a19\u984c: DancingWitnTheMoon.mp3.mp3\nINFO:test_home_pc:\u65b0\u97f3\u983b src: https://tw.hicdn.beanfun.com/beanfun/WebImage/1597849186288.mp3\nINFO:test_home_pc:\u6b4c\u66f2\u5207\u63db\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:272 \u6e2c\u8a66\u9ede\u64ca\u4e0b\u4e00\u9996\u6309\u9215\u662f\u5426\u5207\u63db\u6b4c\u66f2\nINFO     test_home_pc:test_home_pc.py:279 \u521d\u59cb\u6b4c\u66f2\u6a19\u984c: RaindropFlower.mp3\nINFO     test_home_pc:test_home_pc.py:283 \u521d\u59cb\u97f3\u983b src: https://tw.hicdn.beanfun.com/beanfun/WebImage/1597849677023.mp3\nINFO     test_home_pc:test_home_pc.py:298 \u65b0\u6b4c\u66f2\u6a19\u984c: DancingWitnTheMoon.mp3.mp3\nINFO     test_home_pc:test_home_pc.py:302 \u65b0\u97f3\u983b src: https://tw.hicdn.beanfun.com/beanfun/WebImage/1597849186288.mp3\nINFO     test_home_pc:test_home_pc.py:306 \u6b4c\u66f2\u5207\u63db\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_sound_marquee_display_normal&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_sound_marquee_display_normal&#34;, &#34;duration&#34;: &#34;729 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_sound_marquee_display_normal&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;729 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u6aa2\u67e5\u6b4c\u540d\u8dd1\u99ac\u71c8\u662f\u5426\u6b63\u5e38\u986f\u793a\nINFO:test_home_pc:\u6b4c\u540d\u8dd1\u99ac\u71c8\u986f\u793a\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:314 \u6aa2\u67e5\u6b4c\u540d\u8dd1\u99ac\u71c8\u662f\u5426\u6b63\u5e38\u986f\u793a\nINFO     test_home_pc:test_home_pc.py:319 \u6b4c\u540d\u8dd1\u99ac\u71c8\u986f\u793a\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_game_start_not_logged_in_redirect&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_game_start_not_logged_in_redirect&#34;, &#34;duration&#34;: &#34;00:00:07&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_game_start_not_logged_in_redirect&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:07&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u672a\u767b\u5165\u72c0\u614b\u4e0b\u9ede\u64caGAME START\nINFO:test_home_pc:\u76ee\u524d\u7db2\u9801\u70bahttps://tw.newlogin.beanfun.com/loginform.aspx?skey=20250367553bce67e246&amp;amp;display_mode=2\nINFO:test_home_pc:\u672a\u767b\u5165GAME START\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:327 \u672a\u767b\u5165\u72c0\u614b\u4e0b\u9ede\u64caGAME START\nINFO     test_home_pc:test_home_pc.py:333 \u76ee\u524d\u7db2\u9801\u70bahttps://tw.newlogin.beanfun.com/loginform.aspx?skey=20250367553bce67e246&amp;amp;display_mode=2\nINFO     test_home_pc:test_home_pc.py:335 \u672a\u767b\u5165GAME START\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_game_start_hover_animation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_game_start_hover_animation&#34;, &#34;duration&#34;: &#34;00:00:05&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_game_start_hover_animation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:05&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u6e2c\u8a66webstart\u6309\u9215hover\u80cc\u666f\u8b8a\u5316\nINFO:test_home_pc:\u6309\u9215\u662f\u5426\u53ef\u898b: True\nINFO:test_home_pc:\u6309\u9215\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 618, &amp;#x27;y&amp;#x27;: 298}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 350, &amp;#x27;width&amp;#x27;: 350}\nINFO:test_home_pc:\u521d\u59cb\u72c0\u614b\uff08\u6ed1\u9f20\u4e0d\u5728\u6309\u9215\u4e0a\uff09 - :after background: rgba(0, 0, 0, 0) url(&amp;quot;https://tw.hicdn.beanfun.com/beanfun/GamaWWW/MapleStory/official/2020/style/img/gamestart.png&amp;quot;) no-repeat scroll 50% 0% / auto padding-box border-box\nINFO:test_home_pc:\u6ed1\u9f20\u79fb\u5230\u6309\u9215\u4e0a\u72c0\u614b - :after background: rgba(0, 0, 0, 0) url(&amp;quot;https://tw.hicdn.beanfun.com/beanfun/GamaWWW/MapleStory/official/2020/style/img/gamestart.png&amp;quot;) no-repeat scroll 50% 100% / auto padding-box border-box\nINFO:test_home_pc:\u5dee\u7570\u6bd4\u8f03\uff1a\u521d\u59cb != hover\nINFO:test_home_pc:webstart\u6309\u9215hover\u80cc\u666f\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:362 \u6e2c\u8a66webstart\u6309\u9215hover\u80cc\u666f\u8b8a\u5316\nINFO     test_home_pc:test_home_pc.py:367 \u6309\u9215\u662f\u5426\u53ef\u898b: True\nINFO     test_home_pc:test_home_pc.py:368 \u6309\u9215\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 618, &amp;#x27;y&amp;#x27;: 298}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 350, &amp;#x27;width&amp;#x27;: 350}\nINFO     test_home_pc:test_home_pc.py:379 \u521d\u59cb\u72c0\u614b\uff08\u6ed1\u9f20\u4e0d\u5728\u6309\u9215\u4e0a\uff09 - :after background: rgba(0, 0, 0, 0) url(&amp;quot;https://tw.hicdn.beanfun.com/beanfun/GamaWWW/MapleStory/official/2020/style/img/gamestart.png&amp;quot;) no-repeat scroll 50% 0% / auto padding-box border-box\nINFO     test_home_pc:test_home_pc.py:390 \u6ed1\u9f20\u79fb\u5230\u6309\u9215\u4e0a\u72c0\u614b - :after background: rgba(0, 0, 0, 0) url(&amp;quot;https://tw.hicdn.beanfun.com/beanfun/GamaWWW/MapleStory/official/2020/style/img/gamestart.png&amp;quot;) no-repeat scroll 50% 100% / auto padding-box border-box\nINFO     test_home_pc:test_home_pc.py:393 \u5dee\u7570\u6bd4\u8f03\uff1a\u521d\u59cb != hover\nINFO     test_home_pc:test_home_pc.py:396 webstart\u6309\u9215hover\u80cc\u666f\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_game_download_redirect&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_game_download_redirect&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_game_download_redirect&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u9ede\u64ca\u904a\u6232\u4e0b\u8f09\u4e26\u6aa2\u67e5\u8df3\u8f49\nINFO:test_home_pc:\u904a\u6232\u4e0b\u8f09\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:405 \u9ede\u64ca\u904a\u6232\u4e0b\u8f09\u4e26\u6aa2\u67e5\u8df3\u8f49\nINFO     test_home_pc:test_home_pc.py:412 \u904a\u6232\u4e0b\u8f09\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_register_account_redirect&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_register_account_redirect&#34;, &#34;duration&#34;: &#34;00:00:11&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_register_account_redirect&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:11&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u9ede\u64ca\u7533\u8acb\u5e33\u865f\u4e26\u6aa2\u67e5\u8df3\u8f49\nINFO:test_home_pc:\u7533\u8acb\u5e33\u865f\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:420 \u9ede\u64ca\u7533\u8acb\u5e33\u865f\u4e26\u6aa2\u67e5\u8df3\u8f49\nINFO     test_home_pc:test_home_pc.py:427 \u7533\u8acb\u5e33\u865f\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_navigation_bar_fixed_on_scroll&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_navigation_bar_fixed_on_scroll&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_navigation_bar_fixed_on_scroll&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u6aa2\u67e5\u5c0e\u89bd\u5217\u662f\u5426\u5728\u4e0b\u6ed1\u6642\u56fa\u5b9a\nINFO:test_home_pc:\u4e0b\u6ed1\u81f3\u51fa\u73fe\u5c0e\u822a\u5217\nINFO:test_home_pc:\u518d\u6b21\u4e0b\u6ed1\u6e2c\u8a66\u5c0e\u822a\u5217\u662f\u5426\u56fa\u5b9a\nINFO:test_home_pc:\u5c0e\u89bd\u5217\u56fa\u5b9a\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:434 \u6aa2\u67e5\u5c0e\u89bd\u5217\u662f\u5426\u5728\u4e0b\u6ed1\u6642\u56fa\u5b9a\nINFO     test_home_pc:test_home_pc.py:436 \u4e0b\u6ed1\u81f3\u51fa\u73fe\u5c0e\u822a\u5217\nINFO     test_home_pc:test_home_pc.py:441 \u518d\u6b21\u4e0b\u6ed1\u6e2c\u8a66\u5c0e\u822a\u5217\u662f\u5426\u56fa\u5b9a\nINFO     test_home_pc:test_home_pc.py:444 \u5c0e\u89bd\u5217\u56fa\u5b9a\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_navigation_bar_titles_display&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_navigation_bar_titles_display&#34;, &#34;duration&#34;: &#34;785 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_navigation_bar_titles_display&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;785 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u958b\u59cb\u6aa2\u67e5\u4e3b\u9078\u55ae\u5927\u6a19\u984c\nINFO:test_home_pc:\u9810\u671f: \u6700\u65b0\u6d88\u606f \u5be6\u969b: \u6700\u65b0\u6d88\u606f\nINFO:test_home_pc:\u9810\u671f: \u6953\u8449\u5716\u66f8 \u5be6\u969b: \u6953\u8449\u5716\u66f8\nINFO:test_home_pc:\u9810\u671f: \u4e0b\u8f09\u5c08\u5340 \u5be6\u969b: \u4e0b\u8f09\u5c08\u5340\nINFO:test_home_pc:\u9810\u671f: \u6953\u8449\u6703\u54e1 \u5be6\u969b: \u6953\u8449\u6703\u54e1\nINFO:test_home_pc:\u9810\u671f: \u9999\u6e2f\u5c08\u5340 \u5be6\u969b: \u9999\u6e2f\u5c08\u5340\nINFO:test_home_pc:\u6240\u6709\u4e3b\u9078\u55ae\u5927\u6a19\u984c\u6aa2\u67e5\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:460 \u958b\u59cb\u6aa2\u67e5\u4e3b\u9078\u55ae\u5927\u6a19\u984c\nINFO     test_home_pc:test_home_pc.py:478 \u9810\u671f: \u6700\u65b0\u6d88\u606f \u5be6\u969b: \u6700\u65b0\u6d88\u606f\nINFO     test_home_pc:test_home_pc.py:478 \u9810\u671f: \u6953\u8449\u5716\u66f8 \u5be6\u969b: \u6953\u8449\u5716\u66f8\nINFO     test_home_pc:test_home_pc.py:478 \u9810\u671f: \u4e0b\u8f09\u5c08\u5340 \u5be6\u969b: \u4e0b\u8f09\u5c08\u5340\nINFO     test_home_pc:test_home_pc.py:478 \u9810\u671f: \u6953\u8449\u6703\u54e1 \u5be6\u969b: \u6953\u8449\u6703\u54e1\nINFO     test_home_pc:test_home_pc.py:478 \u9810\u671f: \u9999\u6e2f\u5c08\u5340 \u5be6\u969b: \u9999\u6e2f\u5c08\u5340\nINFO     test_home_pc:test_home_pc.py:482 \u6240\u6709\u4e3b\u9078\u55ae\u5927\u6a19\u984c\u6aa2\u67e5\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_nav_news_anchor_redirect&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_nav_news_anchor_redirect&#34;, &#34;duration&#34;: &#34;00:00:06&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_nav_news_anchor_redirect&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:06&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u9ede\u64ca\u6700\u65b0\u6d88\u606f\u4e26\u6aa2\u67e5\u9328\u9ede\u8df3\u8f49\nINFO:test_home_pc:\u6700\u65b0\u6d88\u606f\u9328\u9ede\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:490 \u9ede\u64ca\u6700\u65b0\u6d88\u606f\u4e26\u6aa2\u67e5\u9328\u9ede\u8df3\u8f49\nINFO     test_home_pc:test_home_pc.py:514 \u6700\u65b0\u6d88\u606f\u9328\u9ede\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_nav_books_anchor_redirect&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_nav_books_anchor_redirect&#34;, &#34;duration&#34;: &#34;00:00:05&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_nav_books_anchor_redirect&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:05&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u9ede\u64ca\u6953\u8449\u5716\u66f8\u4e26\u6aa2\u67e5\u9328\u9ede\u8df3\u8f49\nINFO:test_home_pc:\u6953\u8449\u5716\u66f8\u9328\u9ede\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:523 \u9ede\u64ca\u6953\u8449\u5716\u66f8\u4e26\u6aa2\u67e5\u9328\u9ede\u8df3\u8f49\nINFO     test_home_pc:test_home_pc.py:538 \u6953\u8449\u5716\u66f8\u9328\u9ede\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_nav_download_redirect&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_nav_download_redirect&#34;, &#34;duration&#34;: &#34;00:00:05&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_nav_download_redirect&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:05&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u9ede\u64ca\u4e0b\u8f09\u5c08\u5340\u4e26\u6aa2\u67e5\u8df3\u8f49\nINFO:test_home_pc:\u4e0b\u8f09\u5c08\u5340\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:545 \u9ede\u64ca\u4e0b\u8f09\u5c08\u5340\u4e26\u6aa2\u67e5\u8df3\u8f49\nINFO     test_home_pc:test_home_pc.py:560 \u4e0b\u8f09\u5c08\u5340\u8df3\u8f49\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_nav_member_not_clickable&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_nav_member_not_clickable&#34;, &#34;duration&#34;: &#34;715 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_nav_member_not_clickable&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;715 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u6aa2\u67e5\u6953\u8449\u6703\u54e1\u662f\u5426\u4e0d\u53ef\u9ede\u64ca\nINFO:test_home_pc:\u6953\u8449\u6703\u54e1\u4e0d\u53ef\u9ede\u64ca\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:568 \u6aa2\u67e5\u6953\u8449\u6703\u54e1\u662f\u5426\u4e0d\u53ef\u9ede\u64ca\nINFO     test_home_pc:test_home_pc.py:584 \u6953\u8449\u6703\u54e1\u4e0d\u53ef\u9ede\u64ca\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_news_submenu_links&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_news_submenu_links&#34;, &#34;duration&#34;: &#34;00:01:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_news_submenu_links&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:01:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u958b\u59cb\u6e2c\u8a66\u6700\u65b0\u6d88\u606f\u5b50\u9078\u55ae\u9023\u7d50\u529f\u80fd\nINFO:test_home_pc:\u5b50\u9078\u55ae\u4e2d\u627e\u5230 4 \u500b\u9023\u7d50\nINFO:test_home_pc:\u5df2\u95dc\u9589\u6d6e\u52d5\u6309\u9215\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u5168\u90e8\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link mmAll\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 193, &amp;#x27;y&amp;#x27;: 752}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}\nINFO:test_home_pc:\u5168\u90e8 \u9ede\u64ca\u5f8c\u7121 active \u72c0\u614b\uff0c\u7576\u524d class: mMenumenu-sub-link mmAll\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u6d3b\u52d5\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link mmEvent\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 193, &amp;#x27;y&amp;#x27;: 1850}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}\nINFO:test_home_pc:\u6d3b\u52d5 \u9ede\u64ca\u5f8c\u7121 active \u72c0\u614b\uff0c\u7576\u524d class: mMenumenu-sub-link mmEvent\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u66f4\u65b0\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link mmUpdate\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 193, &amp;#x27;y&amp;#x27;: 1885}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}\nINFO:test_home_pc:\u66f4\u65b0 \u9ede\u64ca\u5f8c\u7121 active \u72c0\u614b\uff0c\u7576\u524d class: mMenumenu-sub-link mmUpdate\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u91cd\u8981\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link mmImportant\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 193, &amp;#x27;y&amp;#x27;: 1920}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}\nINFO:test_home_pc:\u91cd\u8981 \u9ede\u64ca\u5f8c\u7121 active \u72c0\u614b\uff0c\u7576\u524d class: mMenumenu-sub-link mmImportant\nINFO:test_home_pc:\u6e2c\u8a66\u5408\u4f5c\u806f\u7e6b\u9023\u7d50\nINFO:test_home_pc:\u672a\u5075\u6e2c\u5230\u4efb\u4f55\u65b0\u9032\u7a0b\uff0cemail \u8996\u7a97\u53ef\u80fd\u5df2\u5feb\u901f\u95dc\u9589\u6216\u672a\u89f8\u767c\nINFO:test_home_pc:\u6700\u65b0\u6d88\u606f\u5b50\u9078\u55ae\u9023\u7d50\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:611 \u958b\u59cb\u6e2c\u8a66\u6700\u65b0\u6d88\u606f\u5b50\u9078\u55ae\u9023\u7d50\u529f\u80fd\nINFO     test_home_pc:test_home_pc.py:633 \u5b50\u9078\u55ae\u4e2d\u627e\u5230 4 \u500b\u9023\u7d50\nINFO     test_home_pc:test_home_pc.py:643 \u5df2\u95dc\u9589\u6d6e\u52d5\u6309\u9215\nINFO     test_home_pc:test_home_pc.py:659 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u5168\u90e8\nINFO     test_home_pc:test_home_pc.py:666 \u9ede\u64ca\u524d class: mMenumenu-sub-link mmAll\nINFO     test_home_pc:test_home_pc.py:667 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 193, &amp;#x27;y&amp;#x27;: 752}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}\nINFO     test_home_pc:test_home_pc.py:681 \u5168\u90e8 \u9ede\u64ca\u5f8c\u7121 active \u72c0\u614b\uff0c\u7576\u524d class: mMenumenu-sub-link mmAll\nINFO     test_home_pc:test_home_pc.py:659 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u6d3b\u52d5\nINFO     test_home_pc:test_home_pc.py:666 \u9ede\u64ca\u524d class: mMenumenu-sub-link mmEvent\nINFO     test_home_pc:test_home_pc.py:667 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 193, &amp;#x27;y&amp;#x27;: 1850}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}\nINFO     test_home_pc:test_home_pc.py:681 \u6d3b\u52d5 \u9ede\u64ca\u5f8c\u7121 active \u72c0\u614b\uff0c\u7576\u524d class: mMenumenu-sub-link mmEvent\nINFO     test_home_pc:test_home_pc.py:659 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u66f4\u65b0\nINFO     test_home_pc:test_home_pc.py:666 \u9ede\u64ca\u524d class: mMenumenu-sub-link mmUpdate\nINFO     test_home_pc:test_home_pc.py:667 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 193, &amp;#x27;y&amp;#x27;: 1885}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}\nINFO     test_home_pc:test_home_pc.py:681 \u66f4\u65b0 \u9ede\u64ca\u5f8c\u7121 active \u72c0\u614b\uff0c\u7576\u524d class: mMenumenu-sub-link mmUpdate\nINFO     test_home_pc:test_home_pc.py:659 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u91cd\u8981\nINFO     test_home_pc:test_home_pc.py:666 \u9ede\u64ca\u524d class: mMenumenu-sub-link mmImportant\nINFO     test_home_pc:test_home_pc.py:667 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 193, &amp;#x27;y&amp;#x27;: 1920}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}\nINFO     test_home_pc:test_home_pc.py:681 \u91cd\u8981 \u9ede\u64ca\u5f8c\u7121 active \u72c0\u614b\uff0c\u7576\u524d class: mMenumenu-sub-link mmImportant\nINFO     test_home_pc:test_home_pc.py:684 \u6e2c\u8a66\u5408\u4f5c\u806f\u7e6b\u9023\u7d50\nINFO     test_home_pc:test_home_pc.py:727 \u672a\u5075\u6e2c\u5230\u4efb\u4f55\u65b0\u9032\u7a0b\uff0cemail \u8996\u7a97\u53ef\u80fd\u5df2\u5feb\u901f\u95dc\u9589\u6216\u672a\u89f8\u767c\nINFO     test_home_pc:test_home_pc.py:729 \u6700\u65b0\u6d88\u606f\u5b50\u9078\u55ae\u9023\u7d50\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_maplebook_submenu_links&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_maplebook_submenu_links&#34;, &#34;duration&#34;: &#34;00:00:39&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_maplebook_submenu_links&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:39&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u958b\u59cb\u6e2c\u8a66\u6953\u8449\u5716\u66f8\u5b50\u9078\u55ae\u9023\u7d50\u529f\u80fd\nINFO:test_home_pc:\u5b50\u9078\u55ae\u4e2d\u627e\u5230 6 \u500b\u9023\u7d50\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u8077\u696d\u4ecb\u7d39\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link mmRoles\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 433, &amp;#x27;y&amp;#x27;: 752}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 403.3333435058594\nINFO:test_home_pc:\u9ede\u64ca\u5f8c\u8996\u7a97 Y: 2410.666748046875\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u7cfb\u7d71\u4ecb\u7d39\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link mmSys\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 433, &amp;#x27;y&amp;#x27;: 2586}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 2410.666748046875\nINFO:test_home_pc:\u9ede\u64ca\u5f8c\u8996\u7a97 Y: 3468.666748046875\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u591a\u5a92\u9ad4\u5712\u5730\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link mmArt\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 433, &amp;#x27;y&amp;#x27;: 3679}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 3468.666748046875\nINFO:test_home_pc:\u9ede\u64ca\u5f8c\u8996\u7a97 Y: 4424\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u6a5f\u7387\u578b\u9053\u5177\u8aaa\u660e\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 433, &amp;#x27;y&amp;#x27;: 4670}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 4424\nINFO:test_home_pc:\u6a5f\u7387\u578b\u9053\u5177\u8aaa\u660e \u958b\u555f\u65b0\u7a97\u53e3\nINFO:test_home_pc:\u65b0\u7a97\u53e3 URL: https://maplestory.beanfun.com/main\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u806f\u76df\u6230\u5730\u6392\u884c\u699c\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 433, &amp;#x27;y&amp;#x27;: 4705}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 4424\nINFO:test_home_pc:\u5df2\u8df3\u8f49\u5230 URL: https://tw-event.beanfun.com/MapleStory/UnionWebRank/Index.aspx\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u521d\u5165\u904a\u6232\u8aaa\u660e\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 433, &amp;#x27;y&amp;#x27;: 4879}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 4562.66650390625\nINFO:test_home_pc:\u521d\u5165\u904a\u6232\u8aaa\u660e \u958b\u555f\u65b0\u7a97\u53e3\nINFO:test_home_pc:\u65b0\u7a97\u53e3 URL: https://maplestory.beanfun.com/main\nINFO:test_home_pc:\u6953\u8449\u5716\u66f8\u5b50\u9078\u55ae\u9023\u7d50\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:737 \u958b\u59cb\u6e2c\u8a66\u6953\u8449\u5716\u66f8\u5b50\u9078\u55ae\u9023\u7d50\u529f\u80fd\nINFO     test_home_pc:test_home_pc.py:759 \u5b50\u9078\u55ae\u4e2d\u627e\u5230 6 \u500b\u9023\u7d50\nINFO     test_home_pc:test_home_pc.py:776 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u8077\u696d\u4ecb\u7d39\nINFO     test_home_pc:test_home_pc.py:789 \u9ede\u64ca\u524d class: mMenumenu-sub-link mmRoles\nINFO     test_home_pc:test_home_pc.py:790 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 433, &amp;#x27;y&amp;#x27;: 752}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 403.3333435058594\nINFO     test_home_pc:test_home_pc.py:833 \u9ede\u64ca\u5f8c\u8996\u7a97 Y: 2410.666748046875\nINFO     test_home_pc:test_home_pc.py:776 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u7cfb\u7d71\u4ecb\u7d39\nINFO     test_home_pc:test_home_pc.py:789 \u9ede\u64ca\u524d class: mMenumenu-sub-link mmSys\nINFO     test_home_pc:test_home_pc.py:790 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 433, &amp;#x27;y&amp;#x27;: 2586}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 2410.666748046875\nINFO     test_home_pc:test_home_pc.py:833 \u9ede\u64ca\u5f8c\u8996\u7a97 Y: 3468.666748046875\nINFO     test_home_pc:test_home_pc.py:776 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u591a\u5a92\u9ad4\u5712\u5730\nINFO     test_home_pc:test_home_pc.py:789 \u9ede\u64ca\u524d class: mMenumenu-sub-link mmArt\nINFO     test_home_pc:test_home_pc.py:790 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 433, &amp;#x27;y&amp;#x27;: 3679}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 3468.666748046875\nINFO     test_home_pc:test_home_pc.py:833 \u9ede\u64ca\u5f8c\u8996\u7a97 Y: 4424\nINFO     test_home_pc:test_home_pc.py:776 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u6a5f\u7387\u578b\u9053\u5177\u8aaa\u660e\nINFO     test_home_pc:test_home_pc.py:789 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:790 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 433, &amp;#x27;y&amp;#x27;: 4670}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 4424\nINFO     test_home_pc:test_home_pc.py:801 \u6a5f\u7387\u578b\u9053\u5177\u8aaa\u660e \u958b\u555f\u65b0\u7a97\u53e3\nINFO     test_home_pc:test_home_pc.py:804 \u65b0\u7a97\u53e3 URL: https://maplestory.beanfun.com/main\nINFO     test_home_pc:test_home_pc.py:776 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u806f\u76df\u6230\u5730\u6392\u884c\u699c\nINFO     test_home_pc:test_home_pc.py:789 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:790 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 433, &amp;#x27;y&amp;#x27;: 4705}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 4424\nINFO     test_home_pc:test_home_pc.py:816 \u5df2\u8df3\u8f49\u5230 URL: https://tw-event.beanfun.com/MapleStory/UnionWebRank/Index.aspx\nINFO     test_home_pc:test_home_pc.py:776 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u521d\u5165\u904a\u6232\u8aaa\u660e\nINFO     test_home_pc:test_home_pc.py:789 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:790 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 433, &amp;#x27;y&amp;#x27;: 4879}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 4562.66650390625\nINFO     test_home_pc:test_home_pc.py:801 \u521d\u5165\u904a\u6232\u8aaa\u660e \u958b\u555f\u65b0\u7a97\u53e3\nINFO     test_home_pc:test_home_pc.py:804 \u65b0\u7a97\u53e3 URL: https://maplestory.beanfun.com/main\nINFO     test_home_pc:test_home_pc.py:837 \u6953\u8449\u5716\u66f8\u5b50\u9078\u55ae\u9023\u7d50\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_download_submenu_links&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_download_submenu_links&#34;, &#34;duration&#34;: &#34;00:00:41&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_download_submenu_links&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:41&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u958b\u59cb\u6e2c\u8a66\u4e0b\u8f09\u5c08\u5340\u5b50\u9078\u55ae\u9023\u7d50\u529f\u80fd\nINFO:test_home_pc:\u5b50\u9078\u55ae\u4e2d\u627e\u5230 5 \u500b\u9023\u7d50\nINFO:test_home_pc:\u5df2\u95dc\u9589\u6d6e\u52d5\u6309\u9215\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u904a\u6232\u4e3b\u7a0b\u5f0f\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link mmCore\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 673, &amp;#x27;y&amp;#x27;: 752}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 403.3333435058594\nINFO:test_home_pc:\u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/download\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u904a\u6232\u66f4\u65b0\u6a94\u6848\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link mmDownloadUpdate\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 673, &amp;#x27;y&amp;#x27;: 787}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 438.6666564941406\nINFO:test_home_pc:\u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/download?download_type=2\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u5b8c\u6574\u5b89\u88dd\u8aaa\u660e\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link mmIns\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 673, &amp;#x27;y&amp;#x27;: 822}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 474\nINFO:test_home_pc:\u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/download?ins=install\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u624b\u52d5\u66f4\u65b0\u8aaa\u660e\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link mmManual\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 673, &amp;#x27;y&amp;#x27;: 858}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 509.3333435058594\nINFO:test_home_pc:\u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/download?ins=update\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u904a\u6232\u914d\u5099\u9700\u6c42\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link mmRequire\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 673, &amp;#x27;y&amp;#x27;: 893}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 544.6666870117188\nINFO:test_home_pc:\u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/download?ins=require\nINFO:test_home_pc:\u4e0b\u8f09\u5c08\u5340\u5b50\u9078\u55ae\u9023\u7d50\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:845 \u958b\u59cb\u6e2c\u8a66\u4e0b\u8f09\u5c08\u5340\u5b50\u9078\u55ae\u9023\u7d50\u529f\u80fd\nINFO     test_home_pc:test_home_pc.py:867 \u5b50\u9078\u55ae\u4e2d\u627e\u5230 5 \u500b\u9023\u7d50\nINFO     test_home_pc:test_home_pc.py:877 \u5df2\u95dc\u9589\u6d6e\u52d5\u6309\u9215\nINFO     test_home_pc:test_home_pc.py:899 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u904a\u6232\u4e3b\u7a0b\u5f0f\nINFO     test_home_pc:test_home_pc.py:907 \u9ede\u64ca\u524d class: mMenumenu-sub-link mmCore\nINFO     test_home_pc:test_home_pc.py:908 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 673, &amp;#x27;y&amp;#x27;: 752}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 403.3333435058594\nINFO     test_home_pc:test_home_pc.py:922 \u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/download\nINFO     test_home_pc:test_home_pc.py:899 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u904a\u6232\u66f4\u65b0\u6a94\u6848\nINFO     test_home_pc:test_home_pc.py:907 \u9ede\u64ca\u524d class: mMenumenu-sub-link mmDownloadUpdate\nINFO     test_home_pc:test_home_pc.py:908 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 673, &amp;#x27;y&amp;#x27;: 787}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 438.6666564941406\nINFO     test_home_pc:test_home_pc.py:922 \u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/download?download_type=2\nINFO     test_home_pc:test_home_pc.py:899 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u5b8c\u6574\u5b89\u88dd\u8aaa\u660e\nINFO     test_home_pc:test_home_pc.py:907 \u9ede\u64ca\u524d class: mMenumenu-sub-link mmIns\nINFO     test_home_pc:test_home_pc.py:908 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 673, &amp;#x27;y&amp;#x27;: 822}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 474\nINFO     test_home_pc:test_home_pc.py:922 \u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/download?ins=install\nINFO     test_home_pc:test_home_pc.py:899 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u624b\u52d5\u66f4\u65b0\u8aaa\u660e\nINFO     test_home_pc:test_home_pc.py:907 \u9ede\u64ca\u524d class: mMenumenu-sub-link mmManual\nINFO     test_home_pc:test_home_pc.py:908 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 673, &amp;#x27;y&amp;#x27;: 858}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 509.3333435058594\nINFO     test_home_pc:test_home_pc.py:922 \u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/download?ins=update\nINFO     test_home_pc:test_home_pc.py:899 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u904a\u6232\u914d\u5099\u9700\u6c42\nINFO     test_home_pc:test_home_pc.py:907 \u9ede\u64ca\u524d class: mMenumenu-sub-link mmRequire\nINFO     test_home_pc:test_home_pc.py:908 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 673, &amp;#x27;y&amp;#x27;: 893}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 544.6666870117188\nINFO     test_home_pc:test_home_pc.py:922 \u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/download?ins=require\nINFO     test_home_pc:test_home_pc.py:937 \u4e0b\u8f09\u5c08\u5340\u5b50\u9078\u55ae\u9023\u7d50\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_membership_submenu_links&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_membership_submenu_links&#34;, &#34;duration&#34;: &#34;00:01:20&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_membership_submenu_links&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:01:20&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u958b\u59cb\u6e2c\u8a66\u6953\u8449\u6703\u54e1\u5b50\u9078\u55ae\u9023\u7d50\u529f\u80fd\nINFO:test_home_pc:\u5b50\u9078\u55ae\u4e2d\u627e\u5230 9 \u500b\u9023\u7d50\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u4fee\u6539\u7b2c\u4e8c\u7d44\u5bc6\u78bc\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1140}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO:test_home_pc:\u4fee\u6539\u7b2c\u4e8c\u7d44\u5bc6\u78bc \u958b\u555f\u65b0\u7a97\u53e3\nINFO:test_home_pc:\u65b0\u7a97\u53e3 URL: https://maplestory.beanfun.com/main\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u5ba2\u670d\u4e2d\u5fc3\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1175}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO:test_home_pc:\u5ba2\u670d\u4e2d\u5fc3 \u958b\u555f\u65b0\u7a97\u53e3\nINFO:test_home_pc:\u65b0\u7a97\u53e3 URL: https://maplestory-event.beanfun.com/eventad/eventad?eventadid=5325\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u5916\u639b\u6aa2\u8209\u5c08\u5340\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1210}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO:test_home_pc:\u5916\u639b\u6aa2\u8209\u5c08\u5340 \u958b\u555f\u65b0\u7a97\u53e3\nINFO:test_home_pc:\u65b0\u7a97\u53e3 URL: https://maplestory-event.beanfun.com/eventad/eventad?eventadid=10121\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u9053\u5177\u514c\u63db\u5c08\u5340\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1246}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO:test_home_pc:\u9053\u5177\u514c\u63db\u5c08\u5340 \u958b\u555f\u65b0\u7a97\u53e3\nINFO:test_home_pc:\u65b0\u7a97\u53e3 URL: https://tw-event.beanfun.com/MapleStory/SetSecondPassword/index.aspx\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u904a\u6232\u5e33\u865f\u7533\u8acb\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1281}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO:test_home_pc:\u904a\u6232\u5e33\u865f\u7533\u8acb \u958b\u555f\u65b0\u7a97\u53e3\nINFO:test_home_pc:\u65b0\u7a97\u53e3 URL: https://csp.tw.beanfun.com/\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u5e8f\u865f\u67e5\u8a62\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1316}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO:test_home_pc:\u5df2\u8df3\u8f49\u5230 URL: https://tw.newlogin.beanfun.com/loginform.aspx?skey=202503ef79b4a146c845&amp;amp;display_mode=2\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u904a\u6232\u7ba1\u7406\u898f\u7ae0\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1351}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO:test_home_pc:\u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/policy\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: Code of Conduct\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1386}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO:test_home_pc:\u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/policy?section=content07\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u8655\u7f70\u540d\u55ae\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1422}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO:test_home_pc:\u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/blacklist\nINFO:test_home_pc:\u6953\u8449\u6703\u54e1\u5b50\u9078\u55ae\u9023\u7d50\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:945 \u958b\u59cb\u6e2c\u8a66\u6953\u8449\u6703\u54e1\u5b50\u9078\u55ae\u9023\u7d50\u529f\u80fd\nINFO     test_home_pc:test_home_pc.py:964 \u5b50\u9078\u55ae\u4e2d\u627e\u5230 9 \u500b\u9023\u7d50\nINFO     test_home_pc:test_home_pc.py:984 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u4fee\u6539\u7b2c\u4e8c\u7d44\u5bc6\u78bc\nINFO     test_home_pc:test_home_pc.py:995 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:996 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1140}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO     test_home_pc:test_home_pc.py:1007 \u4fee\u6539\u7b2c\u4e8c\u7d44\u5bc6\u78bc \u958b\u555f\u65b0\u7a97\u53e3\nINFO     test_home_pc:test_home_pc.py:1010 \u65b0\u7a97\u53e3 URL: https://maplestory.beanfun.com/main\nINFO     test_home_pc:test_home_pc.py:984 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u5ba2\u670d\u4e2d\u5fc3\nINFO     test_home_pc:test_home_pc.py:995 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:996 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1175}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO     test_home_pc:test_home_pc.py:1007 \u5ba2\u670d\u4e2d\u5fc3 \u958b\u555f\u65b0\u7a97\u53e3\nINFO     test_home_pc:test_home_pc.py:1010 \u65b0\u7a97\u53e3 URL: https://maplestory-event.beanfun.com/eventad/eventad?eventadid=5325\nINFO     test_home_pc:test_home_pc.py:984 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u5916\u639b\u6aa2\u8209\u5c08\u5340\nINFO     test_home_pc:test_home_pc.py:995 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:996 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1210}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO     test_home_pc:test_home_pc.py:1007 \u5916\u639b\u6aa2\u8209\u5c08\u5340 \u958b\u555f\u65b0\u7a97\u53e3\nINFO     test_home_pc:test_home_pc.py:1010 \u65b0\u7a97\u53e3 URL: https://maplestory-event.beanfun.com/eventad/eventad?eventadid=10121\nINFO     test_home_pc:test_home_pc.py:984 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u9053\u5177\u514c\u63db\u5c08\u5340\nINFO     test_home_pc:test_home_pc.py:995 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:996 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1246}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO     test_home_pc:test_home_pc.py:1007 \u9053\u5177\u514c\u63db\u5c08\u5340 \u958b\u555f\u65b0\u7a97\u53e3\nINFO     test_home_pc:test_home_pc.py:1010 \u65b0\u7a97\u53e3 URL: https://tw-event.beanfun.com/MapleStory/SetSecondPassword/index.aspx\nINFO     test_home_pc:test_home_pc.py:984 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u904a\u6232\u5e33\u865f\u7533\u8acb\nINFO     test_home_pc:test_home_pc.py:995 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:996 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1281}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO     test_home_pc:test_home_pc.py:1007 \u904a\u6232\u5e33\u865f\u7533\u8acb \u958b\u555f\u65b0\u7a97\u53e3\nINFO     test_home_pc:test_home_pc.py:1010 \u65b0\u7a97\u53e3 URL: https://csp.tw.beanfun.com/\nINFO     test_home_pc:test_home_pc.py:984 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u5e8f\u865f\u67e5\u8a62\nINFO     test_home_pc:test_home_pc.py:995 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:996 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1316}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO     test_home_pc:test_home_pc.py:1029 \u5df2\u8df3\u8f49\u5230 URL: https://tw.newlogin.beanfun.com/loginform.aspx?skey=202503ef79b4a146c845&amp;amp;display_mode=2\nINFO     test_home_pc:test_home_pc.py:984 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u904a\u6232\u7ba1\u7406\u898f\u7ae0\nINFO     test_home_pc:test_home_pc.py:995 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:996 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1351}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO     test_home_pc:test_home_pc.py:1029 \u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/policy\nINFO     test_home_pc:test_home_pc.py:984 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: Code of Conduct\nINFO     test_home_pc:test_home_pc.py:995 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:996 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1386}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO     test_home_pc:test_home_pc.py:1029 \u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/policy?section=content07\nINFO     test_home_pc:test_home_pc.py:984 \u6e2c\u8a66\u5b50\u9078\u55ae\u9328\u9ede: \u8655\u7f70\u540d\u55ae\nINFO     test_home_pc:test_home_pc.py:995 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:996 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 913, &amp;#x27;y&amp;#x27;: 1422}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO     test_home_pc:test_home_pc.py:1029 \u5df2\u8df3\u8f49\u5230 URL: https://maplestory.beanfun.com/blacklist\nINFO     test_home_pc:test_home_pc.py:1046 \u6953\u8449\u6703\u54e1\u5b50\u9078\u55ae\u9023\u7d50\u6e2c\u8a66\u901a\u904e\n\n&#34;}], &#34;test_home_pc.py::test_hongkong_submenu_links&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_home_pc.py::test_hongkong_submenu_links&#34;, &#34;duration&#34;: &#34;00:00:42&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_home_pc.py::test_hongkong_submenu_links&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:42&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\nINFO:test_home_pc:\u958b\u59cb\u6e2c\u8a66\u9999\u6e2f\u5c08\u5340\u5b50\u9078\u55ae\u9023\u7d50\u529f\u80fd\nINFO:test_home_pc:\u6210\u529f\u5b9a\u4f4d\u5230 &amp;#x27;\u9999\u6e2f\u5c08\u5340&amp;#x27; \u4e3b\u9023\u7d50\nINFO:test_home_pc:\u5b50\u9078\u55ae\u4e2d\u627e\u5230 4 \u500b\u9023\u7d50\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9023\u7d50: \u7533\u8acb\u6703\u54e1\u5e33\u865f(\u6e2f\u6fb3)\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 1153, &amp;#x27;y&amp;#x27;: 1140}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO:test_home_pc:\u7576\u524d\u7a97\u53e3\u6578: 5\nINFO:test_home_pc:\u7533\u8acb\u6703\u54e1\u5e33\u865f(\u6e2f\u6fb3) \u958b\u555f\u65b0\u7a97\u53e3\nINFO:test_home_pc:\u65b0\u7a97\u53e3 URL: https://event.beanfun.com/customerservice/PluginReporting/PluginBoard/PluginBoardJQ.aspx?_gl=1*ppl21t*_ga*NDQyMDI1OTAuMTc0MzA2MzAwMw..*_ga_CVWC85042K*MTc0MzA2MzAwMi4xLjEuMTc0MzA2MzI2NC4yNi4wLjA.\nINFO:test_home_pc:\u7533\u8acb\u6703\u54e1\u5e33\u865f(\u6e2f\u6fb3) \u9801\u9762\u8f09\u5165\u5b8c\u6210\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9023\u7d50: \u5275\u5efa\u904a\u6232\u5e33\u865f\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 1153, &amp;#x27;y&amp;#x27;: 1175}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO:test_home_pc:\u7576\u524d\u7a97\u53e3\u6578: 5\nINFO:test_home_pc:\u5275\u5efa\u904a\u6232\u5e33\u865f \u958b\u555f\u65b0\u7a97\u53e3\nINFO:test_home_pc:\u65b0\u7a97\u53e3 URL: https://tw.newlogin.beanfun.com/loginform.aspx?skey=202503c08d146c1f9b40&amp;amp;display_mode=2&amp;amp;clientID=B3E2D9CC-0029-4D9D-80F2-143DED692E92\nINFO:test_home_pc:\u5275\u5efa\u904a\u6232\u5e33\u865f \u9801\u9762\u8f09\u5165\u5b8c\u6210\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9023\u7d50: \u5ba2\u670d\u4e2d\u5fc3(\u6e2f\u6fb3)\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 1153, &amp;#x27;y&amp;#x27;: 1210}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO:test_home_pc:\u7576\u524d\u7a97\u53e3\u6578: 5\nINFO:test_home_pc:\u5ba2\u670d\u4e2d\u5fc3(\u6e2f\u6fb3) \u958b\u555f\u65b0\u7a97\u53e3\nINFO:test_home_pc:\u5ba2\u670d\u4e2d\u5fc3(\u6e2f\u6fb3) \u6aa2\u6e2c\u5230\u53ef\u80fd\u6709 alert\uff0c\u76f4\u63a5\u95dc\u9589\u65b0\u7a97\u53e3\nINFO:test_home_pc:\u6e2c\u8a66\u5b50\u9078\u55ae\u9023\u7d50: \u9999\u6e2f\u5b98\u7db2\nINFO:test_home_pc:\u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO:test_home_pc:\u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 1153, &amp;#x27;y&amp;#x27;: 1246}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO:test_home_pc:\u7576\u524d\u7a97\u53e3\u6578: 5\nINFO:test_home_pc:\u9999\u6e2f\u5b98\u7db2 \u958b\u555f\u65b0\u7a97\u53e3\nINFO:test_home_pc:\u65b0\u7a97\u53e3 URL: https://bfweb.hk.beanfun.com/beanfun_web_ap/signup/preregistration.aspx?token=FRJSGJQZ\nINFO:test_home_pc:\u9999\u6e2f\u5b98\u7db2 \u9801\u9762\u8f09\u5165\u5b8c\u6210\nINFO:test_home_pc:\u9999\u6e2f\u5c08\u5340\u5b50\u9078\u55ae\u9023\u7d50\u6e2c\u8a66\u901a\u904e\n\n------------------------------ Captured log call -------------------------------\nINFO     test_home_pc:test_home_pc.py:1054 \u958b\u59cb\u6e2c\u8a66\u9999\u6e2f\u5c08\u5340\u5b50\u9078\u55ae\u9023\u7d50\u529f\u80fd\nINFO     test_home_pc:test_home_pc.py:1064 \u6210\u529f\u5b9a\u4f4d\u5230 &amp;#x27;\u9999\u6e2f\u5c08\u5340&amp;#x27; \u4e3b\u9023\u7d50\nINFO     test_home_pc:test_home_pc.py:1074 \u5b50\u9078\u55ae\u4e2d\u627e\u5230 4 \u500b\u9023\u7d50\nINFO     test_home_pc:test_home_pc.py:1089 \u6e2c\u8a66\u5b50\u9078\u55ae\u9023\u7d50: \u7533\u8acb\u6703\u54e1\u5e33\u865f(\u6e2f\u6fb3)\nINFO     test_home_pc:test_home_pc.py:1107 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:1108 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 1153, &amp;#x27;y&amp;#x27;: 1140}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO     test_home_pc:test_home_pc.py:1118 \u7576\u524d\u7a97\u53e3\u6578: 5\nINFO     test_home_pc:test_home_pc.py:1122 \u7533\u8acb\u6703\u54e1\u5e33\u865f(\u6e2f\u6fb3) \u958b\u555f\u65b0\u7a97\u53e3\nINFO     test_home_pc:test_home_pc.py:1129 \u65b0\u7a97\u53e3 URL: https://event.beanfun.com/customerservice/PluginReporting/PluginBoard/PluginBoardJQ.aspx?_gl=1*ppl21t*_ga*NDQyMDI1OTAuMTc0MzA2MzAwMw..*_ga_CVWC85042K*MTc0MzA2MzAwMi4xLjEuMTc0MzA2MzI2NC4yNi4wLjA.\nINFO     test_home_pc:test_home_pc.py:1133 \u7533\u8acb\u6703\u54e1\u5e33\u865f(\u6e2f\u6fb3) \u9801\u9762\u8f09\u5165\u5b8c\u6210\nINFO     test_home_pc:test_home_pc.py:1089 \u6e2c\u8a66\u5b50\u9078\u55ae\u9023\u7d50: \u5275\u5efa\u904a\u6232\u5e33\u865f\nINFO     test_home_pc:test_home_pc.py:1107 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:1108 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 1153, &amp;#x27;y&amp;#x27;: 1175}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO     test_home_pc:test_home_pc.py:1118 \u7576\u524d\u7a97\u53e3\u6578: 5\nINFO     test_home_pc:test_home_pc.py:1122 \u5275\u5efa\u904a\u6232\u5e33\u865f \u958b\u555f\u65b0\u7a97\u53e3\nINFO     test_home_pc:test_home_pc.py:1129 \u65b0\u7a97\u53e3 URL: https://tw.newlogin.beanfun.com/loginform.aspx?skey=202503c08d146c1f9b40&amp;amp;display_mode=2&amp;amp;clientID=B3E2D9CC-0029-4D9D-80F2-143DED692E92\nINFO     test_home_pc:test_home_pc.py:1133 \u5275\u5efa\u904a\u6232\u5e33\u865f \u9801\u9762\u8f09\u5165\u5b8c\u6210\nINFO     test_home_pc:test_home_pc.py:1089 \u6e2c\u8a66\u5b50\u9078\u55ae\u9023\u7d50: \u5ba2\u670d\u4e2d\u5fc3(\u6e2f\u6fb3)\nINFO     test_home_pc:test_home_pc.py:1107 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:1108 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 1153, &amp;#x27;y&amp;#x27;: 1210}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO     test_home_pc:test_home_pc.py:1118 \u7576\u524d\u7a97\u53e3\u6578: 5\nINFO     test_home_pc:test_home_pc.py:1122 \u5ba2\u670d\u4e2d\u5fc3(\u6e2f\u6fb3) \u958b\u555f\u65b0\u7a97\u53e3\nINFO     test_home_pc:test_home_pc.py:1125 \u5ba2\u670d\u4e2d\u5fc3(\u6e2f\u6fb3) \u6aa2\u6e2c\u5230\u53ef\u80fd\u6709 alert\uff0c\u76f4\u63a5\u95dc\u9589\u65b0\u7a97\u53e3\nINFO     test_home_pc:test_home_pc.py:1089 \u6e2c\u8a66\u5b50\u9078\u55ae\u9023\u7d50: \u9999\u6e2f\u5b98\u7db2\nINFO     test_home_pc:test_home_pc.py:1107 \u9ede\u64ca\u524d class: mMenumenu-sub-link\nINFO     test_home_pc:test_home_pc.py:1108 \u9ede\u64ca\u524d\u4f4d\u7f6e: {&amp;#x27;x&amp;#x27;: 1153, &amp;#x27;y&amp;#x27;: 1246}, \u5927\u5c0f: {&amp;#x27;height&amp;#x27;: 35, &amp;#x27;width&amp;#x27;: 240}, \u8996\u7a97 Y: 1000\nINFO     test_home_pc:test_home_pc.py:1118 \u7576\u524d\u7a97\u53e3\u6578: 5\nINFO     test_home_pc:test_home_pc.py:1122 \u9999\u6e2f\u5b98\u7db2 \u958b\u555f\u65b0\u7a97\u53e3\nINFO     test_home_pc:test_home_pc.py:1129 \u65b0\u7a97\u53e3 URL: https://bfweb.hk.beanfun.com/beanfun_web_ap/signup/preregistration.aspx?token=FRJSGJQZ\nINFO     test_home_pc:test_home_pc.py:1133 \u9999\u6e2f\u5b98\u7db2 \u9801\u9762\u8f09\u5165\u5b8c\u6210\nINFO     test_home_pc:test_home_pc.py:1142 \u9999\u6e2f\u5c08\u5340\u5b50\u9078\u55ae\u9023\u7d50\u6e2c\u8a66\u901a\u904e\n\n--------------------------- Captured stderr teardown ---------------------------\nINFO:conftest:\u95dc\u9589\u700f\u89bd\u5668\nINFO:conftest:\u95dc\u9589mobile\u700f\u89bd\u5668\n\n---------------------------- Captured log teardown -----------------------------\nINFO     conftest:conftest.py:17 \u95dc\u9589\u700f\u89bd\u5668\nINFO     conftest:conftest.py:29 \u95dc\u9589mobile\u700f\u89bd\u5668&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;report.html&#34;}"></div>
+    <script>
+      (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const { getCollapsedCategory, setCollapsedIds } = require('./storage.js')
+
+class DataManager {
+    setManager(data) {
+        const collapsedCategories = [...getCollapsedCategory(data.renderCollapsed)]
+        const collapsedIds = []
+        const tests = Object.values(data.tests).flat().map((test, index) => {
+            const collapsed = collapsedCategories.includes(test.result.toLowerCase())
+            const id = `test_${index}`
+            if (collapsed) {
+                collapsedIds.push(id)
+            }
+            return {
+                ...test,
+                id,
+                collapsed,
+            }
+        })
+        const dataBlob = { ...data, tests }
+        this.data = { ...dataBlob }
+        this.renderData = { ...dataBlob }
+        setCollapsedIds(collapsedIds)
+    }
+
+    get allData() {
+        return { ...this.data }
+    }
+
+    resetRender() {
+        this.renderData = { ...this.data }
+    }
+
+    setRender(data) {
+        this.renderData.tests = [...data]
+    }
+
+    toggleCollapsedItem(id) {
+        this.renderData.tests = this.renderData.tests.map((test) =>
+            test.id === id ? { ...test, collapsed: !test.collapsed } : test,
+        )
+    }
+
+    set allCollapsed(collapsed) {
+        this.renderData = { ...this.renderData, tests: [...this.renderData.tests.map((test) => (
+            { ...test, collapsed }
+        ))] }
+    }
+
+    get testSubset() {
+        return [...this.renderData.tests]
+    }
+
+    get environment() {
+        return this.renderData.environment
+    }
+
+    get initialSort() {
+        return this.data.initialSort
+    }
+}
+
+module.exports = {
+    manager: new DataManager(),
+}
+
+},{"./storage.js":8}],2:[function(require,module,exports){
+const mediaViewer = require('./mediaviewer.js')
+const templateEnvRow = document.getElementById('template_environment_row')
+const templateResult = document.getElementById('template_results-table__tbody')
+
+function htmlToElements(html) {
+    const temp = document.createElement('template')
+    temp.innerHTML = html
+    return temp.content.childNodes
+}
+
+const find = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return elem.querySelector(selector)
+}
+
+const findAll = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return [...elem.querySelectorAll(selector)]
+}
+
+const dom = {
+    getStaticRow: (key, value) => {
+        const envRow = templateEnvRow.content.cloneNode(true)
+        const isObj = typeof value === 'object' && value !== null
+        const values = isObj ? Object.keys(value).map((k) => `${k}: ${value[k]}`) : null
+
+        const valuesElement = htmlToElements(
+            values ? `<ul>${values.map((val) => `<li>${val}</li>`).join('')}<ul>` : `<div>${value}</div>`)[0]
+        const td = findAll('td', envRow)
+        td[0].textContent = key
+        td[1].appendChild(valuesElement)
+
+        return envRow
+    },
+    getResultTBody: ({ testId, id, log, extras, resultsTableRow, tableHtml, result, collapsed }) => {
+        const resultBody = templateResult.content.cloneNode(true)
+        resultBody.querySelector('tbody').classList.add(result.toLowerCase())
+        resultBody.querySelector('tbody').id = testId
+        resultBody.querySelector('.collapsible').dataset.id = id
+
+        resultsTableRow.forEach((html) => {
+            const t = document.createElement('template')
+            t.innerHTML = html
+            resultBody.querySelector('.collapsible').appendChild(t.content)
+        })
+
+        if (log) {
+            // Wrap lines starting with "E" with span.error to color those lines red
+            const wrappedLog = log.replace(/^E.*$/gm, (match) => `<span class="error">${match}</span>`)
+            resultBody.querySelector('.log').innerHTML = wrappedLog
+        } else {
+            resultBody.querySelector('.log').remove()
+        }
+
+        if (collapsed) {
+            resultBody.querySelector('.collapsible > td')?.classList.add('collapsed')
+            resultBody.querySelector('.extras-row').classList.add('hidden')
+        } else {
+            resultBody.querySelector('.collapsible > td')?.classList.remove('collapsed')
+        }
+
+        const media = []
+        extras?.forEach(({ name, format_type, content }) => {
+            if (['image', 'video'].includes(format_type)) {
+                media.push({ path: content, name, format_type })
+            }
+
+            if (format_type === 'html') {
+                resultBody.querySelector('.extraHTML').insertAdjacentHTML('beforeend', `<div>${content}</div>`)
+            }
+        })
+        mediaViewer.setup(resultBody, media)
+
+        // Add custom html from the pytest_html_results_table_html hook
+        tableHtml?.forEach((item) => {
+            resultBody.querySelector('td[class="extra"]').insertAdjacentHTML('beforeend', item)
+        })
+
+        return resultBody
+    },
+}
+
+module.exports = {
+    dom,
+    htmlToElements,
+    find,
+    findAll,
+}
+
+},{"./mediaviewer.js":6}],3:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const storageModule = require('./storage.js')
+
+const getFilteredSubSet = (filter) =>
+    manager.allData.tests.filter(({ result }) => filter.includes(result.toLowerCase()))
+
+const doInitFilter = () => {
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+}
+
+const doFilter = (type, show) => {
+    if (show) {
+        storageModule.showCategory(type)
+    } else {
+        storageModule.hideCategory(type)
+    }
+
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+
+    const sortColumn = storageModule.getSort()
+    doSort(sortColumn, true)
+}
+
+module.exports = {
+    doFilter,
+    doInitFilter,
+}
+
+},{"./datamanager.js":1,"./sort.js":7,"./storage.js":8}],4:[function(require,module,exports){
+const { redraw, bindEvents, renderStatic } = require('./main.js')
+const { doInitFilter } = require('./filter.js')
+const { doInitSort } = require('./sort.js')
+const { manager } = require('./datamanager.js')
+const data = JSON.parse(document.getElementById('data-container').dataset.jsonblob)
+
+function init() {
+    manager.setManager(data)
+    doInitFilter()
+    doInitSort()
+    renderStatic()
+    redraw()
+    bindEvents()
+}
+
+init()
+
+},{"./datamanager.js":1,"./filter.js":3,"./main.js":5,"./sort.js":7}],5:[function(require,module,exports){
+const { dom, find, findAll } = require('./dom.js')
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const { doFilter } = require('./filter.js')
+const {
+    getVisible,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    getSortDirection,
+    possibleFilters,
+} = require('./storage.js')
+
+const removeChildren = (node) => {
+    while (node.firstChild) {
+        node.removeChild(node.firstChild)
+    }
+}
+
+const renderStatic = () => {
+    const renderEnvironmentTable = () => {
+        const environment = manager.environment
+        const rows = Object.keys(environment).map((key) => dom.getStaticRow(key, environment[key]))
+        const table = document.getElementById('environment')
+        removeChildren(table)
+        rows.forEach((row) => table.appendChild(row))
+    }
+    renderEnvironmentTable()
+}
+
+const addItemToggleListener = (elem) => {
+    elem.addEventListener('click', ({ target }) => {
+        const id = target.parentElement.dataset.id
+        manager.toggleCollapsedItem(id)
+
+        const collapsedIds = getCollapsedIds()
+        if (collapsedIds.includes(id)) {
+            const updated = collapsedIds.filter((item) => item !== id)
+            setCollapsedIds(updated)
+        } else {
+            collapsedIds.push(id)
+            setCollapsedIds(collapsedIds)
+        }
+        redraw()
+    })
+}
+
+const renderContent = (tests) => {
+    const sortAttr = getSort(manager.initialSort)
+    const sortAsc = JSON.parse(getSortDirection())
+    const rows = tests.map(dom.getResultTBody)
+    const table = document.getElementById('results-table')
+    const tableHeader = document.getElementById('results-table-head')
+
+    const newTable = document.createElement('table')
+    newTable.id = 'results-table'
+
+    // remove all sorting classes and set the relevant
+    findAll('.sortable', tableHeader).forEach((elem) => elem.classList.remove('asc', 'desc'))
+    tableHeader.querySelector(`.sortable[data-column-type="${sortAttr}"]`)?.classList.add(sortAsc ? 'desc' : 'asc')
+    newTable.appendChild(tableHeader)
+
+    if (!rows.length) {
+        const emptyTable = document.getElementById('template_results-table__body--empty').content.cloneNode(true)
+        newTable.appendChild(emptyTable)
+    } else {
+        rows.forEach((row) => {
+            if (!!row) {
+                findAll('.collapsible td:not(.col-links', row).forEach(addItemToggleListener)
+                find('.logexpander', row).addEventListener('click',
+                    (evt) => evt.target.parentNode.classList.toggle('expanded'),
+                )
+                newTable.appendChild(row)
+            }
+        })
+    }
+
+    table.replaceWith(newTable)
+}
+
+const renderDerived = () => {
+    const currentFilter = getVisible()
+    possibleFilters.forEach((result) => {
+        const input = document.querySelector(`input[data-test-result="${result}"]`)
+        input.checked = currentFilter.includes(result)
+    })
+}
+
+const bindEvents = () => {
+    const filterColumn = (evt) => {
+        const { target: element } = evt
+        const { testResult } = element.dataset
+
+        doFilter(testResult, element.checked)
+        const collapsedIds = getCollapsedIds()
+        const updated = manager.renderData.tests.map((test) => {
+            return {
+                ...test,
+                collapsed: collapsedIds.includes(test.id),
+            }
+        })
+        manager.setRender(updated)
+        redraw()
+    }
+
+    const header = document.getElementById('environment-header')
+    header.addEventListener('click', () => {
+        const table = document.getElementById('environment')
+        table.classList.toggle('hidden')
+        header.classList.toggle('collapsed')
+    })
+
+    findAll('input[name="filter_checkbox"]').forEach((elem) => {
+        elem.addEventListener('click', filterColumn)
+    })
+
+    findAll('.sortable').forEach((elem) => {
+        elem.addEventListener('click', (evt) => {
+            const { target: element } = evt
+            const { columnType } = element.dataset
+            doSort(columnType)
+            redraw()
+        })
+    })
+
+    document.getElementById('show_all_details').addEventListener('click', () => {
+        manager.allCollapsed = false
+        setCollapsedIds([])
+        redraw()
+    })
+    document.getElementById('hide_all_details').addEventListener('click', () => {
+        manager.allCollapsed = true
+        const allIds = manager.renderData.tests.map((test) => test.id)
+        setCollapsedIds(allIds)
+        redraw()
+    })
+}
+
+const redraw = () => {
+    const { testSubset } = manager
+
+    renderContent(testSubset)
+    renderDerived()
+}
+
+module.exports = {
+    redraw,
+    bindEvents,
+    renderStatic,
+}
+
+},{"./datamanager.js":1,"./dom.js":2,"./filter.js":3,"./sort.js":7,"./storage.js":8}],6:[function(require,module,exports){
+class MediaViewer {
+    constructor(assets) {
+        this.assets = assets
+        this.index = 0
+    }
+
+    nextActive() {
+        this.index = this.index === this.assets.length - 1 ? 0 : this.index + 1
+        return [this.activeFile, this.index]
+    }
+
+    prevActive() {
+        this.index = this.index === 0 ? this.assets.length - 1 : this.index -1
+        return [this.activeFile, this.index]
+    }
+
+    get currentIndex() {
+        return this.index
+    }
+
+    get activeFile() {
+        return this.assets[this.index]
+    }
+}
+
+
+const setup = (resultBody, assets) => {
+    if (!assets.length) {
+        resultBody.querySelector('.media').classList.add('hidden')
+        return
+    }
+
+    const mediaViewer = new MediaViewer(assets)
+    const container = resultBody.querySelector('.media-container')
+    const leftArrow = resultBody.querySelector('.media-container__nav--left')
+    const rightArrow = resultBody.querySelector('.media-container__nav--right')
+    const mediaName = resultBody.querySelector('.media__name')
+    const counter = resultBody.querySelector('.media__counter')
+    const imageEl = resultBody.querySelector('img')
+    const sourceEl = resultBody.querySelector('source')
+    const videoEl = resultBody.querySelector('video')
+
+    const setImg = (media, index) => {
+        if (media?.format_type === 'image') {
+            imageEl.src = media.path
+
+            imageEl.classList.remove('hidden')
+            videoEl.classList.add('hidden')
+        } else if (media?.format_type === 'video') {
+            sourceEl.src = media.path
+
+            videoEl.classList.remove('hidden')
+            imageEl.classList.add('hidden')
+        }
+
+        mediaName.innerText = media?.name
+        counter.innerText = `${index + 1} / ${assets.length}`
+    }
+    setImg(mediaViewer.activeFile, mediaViewer.currentIndex)
+
+    const moveLeft = () => {
+        const [media, index] = mediaViewer.prevActive()
+        setImg(media, index)
+    }
+    const doRight = () => {
+        const [media, index] = mediaViewer.nextActive()
+        setImg(media, index)
+    }
+    const openImg = () => {
+        window.open(mediaViewer.activeFile.path, '_blank')
+    }
+    if (assets.length === 1) {
+        container.classList.add('media-container--fullscreen')
+    } else {
+        leftArrow.addEventListener('click', moveLeft)
+        rightArrow.addEventListener('click', doRight)
+    }
+    imageEl.addEventListener('click', openImg)
+}
+
+module.exports = {
+    setup,
+}
+
+},{}],7:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const storageModule = require('./storage.js')
+
+const genericSort = (list, key, ascending, customOrder) => {
+    let sorted
+    if (customOrder) {
+        sorted = list.sort((a, b) => {
+            const aValue = a.result.toLowerCase()
+            const bValue = b.result.toLowerCase()
+
+            const aIndex = customOrder.findIndex((item) => item.toLowerCase() === aValue)
+            const bIndex = customOrder.findIndex((item) => item.toLowerCase() === bValue)
+
+            // Compare the indices to determine the sort order
+            return aIndex - bIndex
+        })
+    } else {
+        sorted = list.sort((a, b) => a[key] === b[key] ? 0 : a[key] > b[key] ? 1 : -1)
+    }
+
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const durationSort = (list, ascending) => {
+    const parseDuration = (duration) => {
+        if (duration.includes(':')) {
+            // If it's in the format "HH:mm:ss"
+            const [hours, minutes, seconds] = duration.split(':').map(Number)
+            return (hours * 3600 + minutes * 60 + seconds) * 1000
+        } else {
+            // If it's in the format "nnn ms"
+            return parseInt(duration)
+        }
+    }
+    const sorted = list.sort((a, b) => parseDuration(a['duration']) - parseDuration(b['duration']))
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const doInitSort = () => {
+    const type = storageModule.getSort(manager.initialSort)
+    const ascending = storageModule.getSortDirection()
+    const list = manager.testSubset
+    const initialOrder = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed', 'Skipped', 'Passed']
+
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    if (type?.toLowerCase() === 'original') {
+        manager.setRender(list)
+    } else {
+        let sortedList
+        switch (type) {
+        case 'duration':
+            sortedList = durationSort(list, ascending)
+            break
+        case 'result':
+            sortedList = genericSort(list, type, ascending, initialOrder)
+            break
+        default:
+            sortedList = genericSort(list, type, ascending)
+            break
+        }
+        manager.setRender(sortedList)
+    }
+}
+
+const doSort = (type, skipDirection) => {
+    const newSortType = storageModule.getSort(manager.initialSort) !== type
+    const currentAsc = storageModule.getSortDirection()
+    let ascending
+    if (skipDirection) {
+        ascending = currentAsc
+    } else {
+        ascending = newSortType ? false : !currentAsc
+    }
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    const list = manager.testSubset
+    const sortedList = type === 'duration' ? durationSort(list, ascending) : genericSort(list, type, ascending)
+    manager.setRender(sortedList)
+}
+
+module.exports = {
+    doInitSort,
+    doSort,
+}
+
+},{"./datamanager.js":1,"./storage.js":8}],8:[function(require,module,exports){
+const possibleFilters = [
+    'passed',
+    'skipped',
+    'failed',
+    'error',
+    'xfailed',
+    'xpassed',
+    'rerun',
+]
+
+const getVisible = () => {
+    const url = new URL(window.location.href)
+    const settings = new URLSearchParams(url.search).get('visible')
+    const lower = (item) => {
+        const lowerItem = item.toLowerCase()
+        if (possibleFilters.includes(lowerItem)) {
+            return lowerItem
+        }
+        return null
+    }
+    return settings === null ?
+        possibleFilters :
+        [...new Set(settings?.split(',').map(lower).filter((item) => item))]
+}
+
+const hideCategory = (categoryToHide) => {
+    const url = new URL(window.location.href)
+    const visibleParams = new URLSearchParams(url.search).get('visible')
+    const currentVisible = visibleParams ? visibleParams.split(',') : [...possibleFilters]
+    const settings = [...new Set(currentVisible)].filter((f) => f !== categoryToHide).join(',')
+
+    url.searchParams.set('visible', settings)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const showCategory = (categoryToShow) => {
+    if (typeof window === 'undefined') {
+        return
+    }
+    const url = new URL(window.location.href)
+    const currentVisible = new URLSearchParams(url.search).get('visible')?.split(',').filter(Boolean) ||
+        [...possibleFilters]
+    const settings = [...new Set([categoryToShow, ...currentVisible])]
+    const noFilter = possibleFilters.length === settings.length || !settings.length
+
+    noFilter ? url.searchParams.delete('visible') : url.searchParams.set('visible', settings.join(','))
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getSort = (initialSort) => {
+    const url = new URL(window.location.href)
+    let sort = new URLSearchParams(url.search).get('sort')
+    if (!sort) {
+        sort = initialSort || 'result'
+    }
+    return sort
+}
+
+const setSort = (type) => {
+    const url = new URL(window.location.href)
+    url.searchParams.set('sort', type)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getCollapsedCategory = (renderCollapsed) => {
+    let categories
+    if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href)
+        const collapsedItems = new URLSearchParams(url.search).get('collapsed')
+        switch (true) {
+        case !renderCollapsed && collapsedItems === null:
+            categories = ['passed']
+            break
+        case collapsedItems?.length === 0 || /^["']{2}$/.test(collapsedItems):
+            categories = []
+            break
+        case /^all$/.test(collapsedItems) || collapsedItems === null && /^all$/.test(renderCollapsed):
+            categories = [...possibleFilters]
+            break
+        default:
+            categories = collapsedItems?.split(',').map((item) => item.toLowerCase()) || renderCollapsed
+            break
+        }
+    } else {
+        categories = []
+    }
+    return categories
+}
+
+const getSortDirection = () => JSON.parse(sessionStorage.getItem('sortAsc')) || false
+const setSortDirection = (ascending) => sessionStorage.setItem('sortAsc', ascending)
+
+const getCollapsedIds = () => JSON.parse(sessionStorage.getItem('collapsedIds')) || []
+const setCollapsedIds = (list) => sessionStorage.setItem('collapsedIds', JSON.stringify(list))
+
+module.exports = {
+    getVisible,
+    hideCategory,
+    showCategory,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    setSort,
+    getSortDirection,
+    setSortDirection,
+    getCollapsedCategory,
+    possibleFilters,
+}
+
+},{}]},{},[4]);
+    </script>
+  </footer>
+</html>
